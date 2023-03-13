@@ -27,6 +27,17 @@ h3 {
     background-color: yellow;
 }
 
+.disc {
+    color: white;
+    font-family: ubuntu;
+}
+
+.disclink {
+    color: red;
+    font-family: ubuntu;
+    text-decoration: none;
+}
+
 .menubutton {
     background-color: #113f67;
     color: white;
@@ -125,5 +136,5 @@ mark {
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url(fonts/Ubuntu.ttf);
+    src: url(../fonts/Ubuntu.ttf);
 }
