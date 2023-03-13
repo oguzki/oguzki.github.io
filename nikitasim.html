@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" sizes="192x192" href="files/pic/ult11.png">
+	<title>NikitaSim</title>
+	<link rel="stylesheet" href="files/css/nikita.css">
+</head>
+
+<style>
+</style>
+
+<body style="background-color: #a2a8d3">
+	<div id="showcode" class="menu1">
+		<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
+			<h3>ваш пароль:</h3>
+			<h2 id="showpass" style="color: white; font-family: ubuntu;"></h2>
+			<button onclick="closeMenu()" class="bb">ок</button>
+		</div>
+	</div>
+	<div id="mainmenu" class="menu">
+		<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
+			<h2 style="color: white; font-family: ubuntu;">NikitaSim</h2>
+			<button class="bb" onclick="start()" autofocus>start</button>
+			<div style="margin: 30px; text-align: center;">
+				<h3>или введите пароль</h3>
+				<input id="parol" size="30" style="text-align: center">
+				<button class="bb" onclick="resume()">продолжить</button>
+				<h3 style="color: red; font-family: ubuntu;" id="errormsg"></h3>
+			</div>
+		</div>
+	</div>
+	<div class="menu2" id="kaz">
+		<h3 onclick="obama()"
+			style="background-color: green; margin: 30px; cursor: pointer; user-select: none; text-align: center; color: white">
+			сыграть</h3>
+		<div style="margin: 30px; text-align: center;">
+			<input id="stavki" type="number" size="20" style="text-align: center">
+		</div>
+		<h1 id="winlose" style="background-color: white; margin: 30px; text-align: center;"></h1>
+	</div>
+	<div class="menu3" id="kaz1" onclick="closeMenu()"></div>
+	<header style="display: flex; justify-content: space-between; background-color: #113f67;">
+		<h3>деньги: <mark id="dengi"></mark></h3>
+		<h3 style="cursor: pointer; user-select: none;" onclick="nextDay()">некст день <mark id="dayD">0</mark>.<mark
+				id="monD">0</mark>.<mark id="yearD">0</mark></h3>
+	</header>
+	<header style="display: flex; justify-content: space-between; background-color: #113f67;">
+		<button class="menubutton" onclick="cazik()">казино</button>
+		<button class="menubutton" onclick="mama()" id="mother">звонок маме</button>
+	</header>
+	<header style="text-align: center; background-color: #113f67;">
+		<button class="menubutton" onclick="generate()">сохраниться</button>
+	</header>
+</body>
+
+<script src="files/script/localiztion.js"></script>
+<script src="files/script/password.js"></script>
+<script src="files/script/time.js"></script>
+
+<script>
+
+	var day = 00;
+	var mon = 00;
+	var year = 00;
+	var money = 00;
+
+	function closeMenu() {
+		document.getElementById('mainmenu').style.zIndex = "-1";
+		document.getElementById('mainmenu').style.opacity = "0";
+		document.getElementById('showcode').style.zIndex = "-1";
+		document.getElementById('showcode').style.opacity = "0";
+		document.getElementById('kaz').style.width = "0";
+		document.getElementById('kaz1').style.width = "0";
+		document.getElementById('winlose').innerHTML = "";
+	}
+
+	function cazik() {
+		document.getElementById('kaz').style.width = "300px";
+		document.getElementById('kaz1').style.width = "1920px";
+	}
+
+	function stp() {
+		money = money + 800;
+		moneychange();
+	}
+
+	function mama() {
+		money = money + 1000;
+		moneychange();
+		document.getElementById('mother').disabled = true;
+		setTimeout(resetbutton, 60000);
+	}
+
+	function resetbutton() {
+		document.getElementById('mother').disabled = false;
+	}
+
+	function daychange() {
+		document.getElementById('dayD').innerHTML = day;
+	}
+
+	function monchange() {
+		document.getElementById('monD').innerHTML = mon;
+	}
+
+	function yearchange() {
+		document.getElementById('yearD').innerHTML = year;
+	}
+
+	function moneychange() {
+		document.getElementById('dengi').innerHTML = money;
+	}
+
+	function obama() {
+		var random = Math.floor(Math.random() * 5) + 1;
+		var stavka = Number(document.getElementById('stavki').value);
+		if (stavka > money) {
+			document.getElementById('winlose').innerHTML = "ставка больше баланса";
+		} else {
+			if (random === 3 || random === 1) {
+				money = money + stavka;
+				moneychange();
+				document.getElementById('winlose').innerHTML = "ура победа";
+			} else {
+				money = money - stavka;
+				moneychange();
+				document.getElementById('winlose').innerHTML = "о нет, слив";
+			}
+		}
+	}
+</script>
+
+</html>
