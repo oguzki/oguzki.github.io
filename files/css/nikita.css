@@ -1,0 +1,113 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0;
+}
+
+h3 {
+    font-family: ubuntu;
+    color: white;
+}
+
+.bb {
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.bb:hover {
+    transform: scale(1.3);
+    color: red;
+    border: 1px solid red;
+    background-color: yellow;
+}
+
+.menubutton {
+    background-color: #113f67;
+    color: white;
+    font-family: ubuntu;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menubutton:disabled {
+    background-color: red;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 4;
+    opacity: 1;
+    overflow-x: hidden;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+
+.menu1 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    overflow-x: hidden;
+    transition: .5s;
+    backdrop-filter: blur(20px);
+}
+
+.menu2 {
+    width: 0;
+    height: 1920px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    overflow-x: hidden;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+
+.menu3 {
+    width: 0;
+    height: 1920px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    opacity: 1;
+    overflow-x: hidden;
+    transition: .5s;
+    background-color: rgba(255, 0, 0, 0.205);
+}
+
+.phone {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    overflow-x: hidden;
+    transition: .5s;
+    backdrop-filter: blur(20px);
+}
+
+mark {
+    background-color: #113f67;
+    color: white;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../files/fonts/Ubuntu.ttf);
+}
