@@ -1,5 +1,6 @@
 function nextDay() {
     day = day + 1;
+    randomsob();
     if (mon === 2) {
         if (day === 29) {
             nextMon();
@@ -29,4 +30,20 @@ function nextYear() {
     mon = 1;
     monchange();
     yearchange();
+}
+
+function daychange() {
+    document.getElementById('dayD').innerHTML = day;
+}
+
+function monchange() {
+    document.getElementById('monD').innerHTML = mon;
+}
+
+function yearchange() {
+    document.getElementById('yearD').innerHTML = year;
+}
+
+function moneychange() {
+    document.getElementById('dengi').innerHTML = money;
 }
