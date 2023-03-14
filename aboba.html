@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>квадрат</title>
+</head>
+
+<style>
+</style>
+
+<body onmousemove="move(event)" onmousedown="start()">
+    <div style="height: 200px; width: 200px; background-color: red;" id="cube">
+    </div>
+</body>
+
+<script>
+    var cube = document.getElementById('cube');
+    var sch = 0;
+
+    function start() {
+        sch = sch + 1;
+    }
+
+    function move(event) {
+        if (sch === 1) {
+            cube.style.marginLeft = event.pageX + 'px';
+            cube.style.marginTop = event.pageY + 'px';
+            var dx = cube.style.marginLeft;
+            var dy = cube.style.marginTop;
+        }
+    }
+</script>
+
+</html>
