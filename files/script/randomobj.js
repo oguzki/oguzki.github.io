@@ -60,6 +60,6 @@ function randomsob() {
         };
     } else {
         openchoice();
-        document.getElementById('randomsod').innerHTML = '<video src="https://drive.google.com/uc?export=download&id=1BdWP_Fnz2h-GqRz1slzdmca307eV28ip" autoplay></video>';
+        document.getElementById('randomsod').innerHTML = '<video src="files/video/theend.mp4" autoplay></video>';
     }
 }
