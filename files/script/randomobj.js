@@ -38,6 +38,7 @@ function openchoice() {
 }
 
 function randomsob() {
+if (money < 200000) {
     var random = Math.floor(Math.random() * 7) + 1;
     if (random === 1) {
         openchoice();
@@ -57,4 +58,5 @@ function randomsob() {
         rchoice1.textContent = hfa[trackindex = 2].choice1;
         rchoice2.textContent = hfa[trackindex = 2].choice2;
     };
+} else {}
 }
