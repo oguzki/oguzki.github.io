@@ -10,7 +10,7 @@
 <style>
 </style>
 
-<body onmousemove="move(event)" onmousedown="start()">
+<body onmousemove="move(event)" onmousedown="start()" onmouseup="stop()">
     <div style="height: 200px; width: 200px; background-color: red;" id="cube">
     </div>
 </body>
@@ -20,13 +20,17 @@
     var sch = 0;
 
     function start() {
-        sch = sch + 1;
+        sch = 1;
+    }
+
+    function stop() {
+        sch = 0;
     }
 
     function move(event) {
         if (sch === 1) {
-            cube.style.marginLeft = event.pageX + 'px';
-            cube.style.marginTop = event.pageY + 'px';
+            cube.style.marginLeft = event.pageX - 100 + 'px';
+            cube.style.marginTop = event.pageY - 100 + 'px';
             var dx = cube.style.marginLeft;
             var dy = cube.style.marginTop;
         }
