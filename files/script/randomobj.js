@@ -60,6 +60,6 @@ if (money < 200000) {
         rchoice2.textContent = hfa[trackindex = 2].choice2;
     };
 } else {
-randomsod.innerHTML = 
+randomsod.innerHTML = <video src="videofile.ogg" autoplay></video>
 }
 }
