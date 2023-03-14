@@ -1,7 +1,6 @@
 const rname = document.getElementById('rname');
 const rchoice1 = document.getElementById('rchoice1');
 const rchoice2 = document.getElementById('rchoice2');
-const randomsod = document.getElementById('randomsod');
 
 const hfa = [
     {
@@ -60,6 +59,6 @@ if (money < 200000) {
         rchoice2.textContent = hfa[trackindex = 2].choice2;
     };
 } else {
-randomsod.innerHTML = "<video src="videofile.ogg" autoplay></video>";
+document.getElementById('randomsod').innerHTML = "<video src="videofile.ogg" autoplay></video>";
 };
 }
