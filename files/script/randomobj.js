@@ -39,22 +39,27 @@ function openchoice() {
 
 function randomsob() {
     var random = Math.floor(Math.random() * 7) + 1;
-    if (random === 1) {
+    if (money < 200000) {
+        if (random === 1) {
+            openchoice();
+            rname.textContent = hfa[trackindex = 0].name;
+            rchoice1.textContent = hfa[trackindex = 0].choice1;
+            rchoice2.textContent = hfa[trackindex = 0].choice2;
+        };
+        if (random === 2) {
+            openchoice();
+            rname.textContent = hfa[trackindex = 1].name;
+            rchoice1.textContent = hfa[trackindex = 1].choice1;
+            rchoice2.textContent = hfa[trackindex = 1].choice2;
+        };
+        if (random === 3) {
+            openchoice();
+            rname.textContent = hfa[trackindex = 2].name;
+            rchoice1.textContent = hfa[trackindex = 2].choice1;
+            rchoice2.textContent = hfa[trackindex = 2].choice2;
+        };
+    } else {
         openchoice();
-        rname.textContent = hfa[trackindex = 0].name;
-        rchoice1.textContent = hfa[trackindex = 0].choice1;
-        rchoice2.textContent = hfa[trackindex = 0].choice2;
-    };
-    if (random === 2) {
-        openchoice();
-        rname.textContent = hfa[trackindex = 1].name;
-        rchoice1.textContent = hfa[trackindex = 1].choice1;
-        rchoice2.textContent = hfa[trackindex = 1].choice2;
-    };
-    if (random === 3) {
-        openchoice();
-        rname.textContent = hfa[trackindex = 2].name;
-        rchoice1.textContent = hfa[trackindex = 2].choice1;
-        rchoice2.textContent = hfa[trackindex = 2].choice2;
-    };
+        document.getElementById('randomsod').innerHTML = '<video src="https://drive.google.com/uc?export=download&id=1BdWP_Fnz2h-GqRz1slzdmca307eV28ip" autoplay></video>';
+    }
 }
