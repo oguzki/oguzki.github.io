@@ -38,7 +38,6 @@ function openchoice() {
 }
 
 function randomsob() {
-if (money < 200000) {
     var random = Math.floor(Math.random() * 7) + 1;
     if (random === 1) {
         openchoice();
@@ -58,7 +57,4 @@ if (money < 200000) {
         rchoice1.textContent = hfa[trackindex = 2].choice1;
         rchoice2.textContent = hfa[trackindex = 2].choice2;
     };
-} else {
-document.getElementById('randomsod').innerHTML = "<video src="videofile.ogg" autoplay></video>";
-};
 }
