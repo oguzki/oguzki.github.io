@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu.ttf);
+}
+
+@font-face {
+    font-family: 'HemiHead';
+    src: url(../fonts/HemiHead.otf);
+}
