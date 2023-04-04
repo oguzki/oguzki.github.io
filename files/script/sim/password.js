@@ -14,7 +14,15 @@ function resume() {
     var code = document.getElementById('parol').value;
     var code1 = Number(document.getElementById('parol').value);
     if (code1 === 0) {
-        var ww = "Пароль неверный";
+        if (lang === 0) { 
+            var ww = "Пароль неверный"; 
+        }
+        if (lang === 1) { 
+            var ww = "Wrong password"; 
+        }
+        if (lang === 2) { 
+            var ww = "パスワードが違います。"; 
+        }
         document.getElementById('errormsg').innerHTML = ww;
     } else {
         var a1 = Number(code.slice(0, 2));

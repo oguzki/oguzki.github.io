@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" sizes="192x192" href="files/pic/ult11.png">
+	<link rel="icon" sizes="192x192" href="">
 	<title>NikitaSim</title>
 	<link rel="stylesheet" href="files/css/nikita.css">
 </head>
@@ -23,15 +23,20 @@
 	<div id="mainmenu" class="menu">
 		<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
 			<h2 style="color: white; font-family: ubuntu;">NikitaSim beta 1.1</h2>
-			<button class="bb" onclick="start()" autofocus>start</button>
-			<div style="margin: 30px; text-align: center;">
-				<h3>или введите пароль</h3>
+			<button class="bb" onclick="start()" autofocus id="lang1">начать</button>
+			<div style="margin: 10px; text-align: center;">
+				<h3 id="lang2">или введите пароль</h3>
 				<input id="parol" size="30" style="text-align: center">
-				<button class="bb" onclick="resume()">продолжить</button>
+				<button class="bb" onclick="resume()" id="lang3">продолжить</button>
 				<h3 style="color: red; font-family: ubuntu;" id="errormsg"></h3>
 			</div>
-			<h3 class="disc">данная игра является шуточной и не имеет ничего общего с реальностью (кроме Никиты)</h3>
-			<h3 class="disc">сделали <a class="disclink" href="https://github.com/oguzki" target="_blank">огузки
+			<div style="display: flex; justify-content: center; margin-bottom: 10px;">
+				<img class="flag" id="flag1" src="files/icons/ru.svg" onclick="rus()">
+				<img class="flag" id="flag2" src="files/icons/gb.svg" onclick="eng()">
+				<img class="flag" id="flag3" src="files/icons/jp.svg" onclick="jp()">
+			</div>
+			<h3 class="disc" id="lang4">данная игра является шуточной и не имеет ничего общего с реальностью (кроме Никиты)</h3>
+			<h3 class="disc" id="lang5">сделали <a class="disclink" href="https://github.com/oguzki" target="_blank">огузки
 					corp.</a> и <a class="disclink" href="https://ult11.github.io" target="_blank">ult11</a>, 2023 год
 			</h3>
 		</div>
@@ -39,7 +44,7 @@
 	<div id="randomobj" class="randomobj">
 		<div id="randomsod"
 			style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
-			<h2 style="color: white; font-family: ubuntu;">вау, это же случайное событие</h2>
+			<h2 style="color: white; font-family: ubuntu;" id="lang6">вау, это же случайное событие</h2>
 			<div style="margin: 30px; text-align: center;">
 				<h3 id="rname">test</h3>
 			</div>
