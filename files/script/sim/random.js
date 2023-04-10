@@ -22,17 +22,17 @@ function randomsob() {
     if (money < 200000) {
         if (random === 1) {
             openchoice();
-            if (lang = 0) {
+            if (lang === 0) {
                 rname.textContent = "сегодня вас укусила пчела";
                 rchoice1.textContent = "затерпеть";
                 rchoice2.textContent = "бомбить ирак";
             };
-            if (lang = 1) {
+            if (lang === 1) {
                 rname.textContent = "you were stung by a bee today";
                 rchoice1.textContent = "be patient";
                 rchoice2.textContent = "bomb Iraq";
             };
-            if (lang = 2) {
+            if (lang === 2) {
                 rname.textContent = "今日、蜂に刺されたんです。";
                 rchoice1.textContent = "気を長く持つ";
                 rchoice2.textContent = "爆弾イラク";
@@ -40,17 +40,17 @@ function randomsob() {
         };
         if (random === 2) {
             openchoice();
-            if (lang = 0) {
+            if (lang === 0) {
                 rname.textContent = "вы пришли в шарагу, а там фсб с проверкой. у себя в кармане вы нашли 50кг кокаина и барахатные тяги. что будете делать?";
                 rchoice1.textContent = "попытаться скрыть";
                 rchoice2.textContent = "а я сидел за изнасилование";
             };
-            if (lang = 1) {
+            if (lang === 1) {
                 rname.textContent = "-";
                 rchoice1.textContent = "try to cover up";
                 rchoice2.textContent = "I was in jail for rape";
             };
-            if (lang = 2) {
+            if (lang === 2) {
                 rname.textContent = "-";
                 rchoice1.textContent = "-";
                 rchoice2.textContent = "レイプで刑務所にいた私";
