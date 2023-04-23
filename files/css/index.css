@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0;
+}
+
+body {
+    background-color: #212121;
+}
+
+.card {
+    background-color: #424242;
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+
+.uncard {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card .name {
+    font-family: ubuntu;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    margin: 0px 5px;
+}
+
+.card .open {
+    text-align: center;
+    margin: 0px 5px;
+    margin-bottom: 3px;
+}
+
+.card .link {
+    font-family: ubuntu;
+    text-decoration: none;
+    color: gold;
+    transition: .5s;
+}
+
+.card .link:hover {
+    color: white;
+}
+
+.mainbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
