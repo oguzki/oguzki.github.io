@@ -12,7 +12,7 @@
 <style>
 </style>
 
-<body style="background-color: #a2a8d3">
+<body style="background-color: #212121">
 	<div id="showcode" class="menu1">
 		<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
 			<h3>ваш пароль:</h3>
@@ -22,7 +22,7 @@
 	</div>
 	<div id="mainmenu" class="menu">
 		<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
-			<h2 style="color: white; font-family: ubuntu;">NikitaSim beta 1.1</h2>
+			<h2 style="color: white; font-family: ubuntu;">NikitaSim beta 1.2</h2>
 			<button class="bb" onclick="start()" autofocus id="lang1">начать</button>
 			<div style="margin: 10px; text-align: center;">
 				<h3 id="lang2">или введите пароль</h3>
@@ -35,7 +35,8 @@
 				<img class="flag" id="flag2" src="files/icons/gb.svg" onclick="eng()">
 				<img class="flag" id="flag3" src="files/icons/jp.svg" onclick="jp()">
 			</div>
-			<h3 class="disc" id="lang4">данная игра является шуточной и не имеет ничего общего с реальностью (кроме Никиты)</h3>
+			<h3 class="disc" id="lang4">данная игра является шуточной и не имеет ничего общего с реальностью (кроме
+				Никиты)</h3>
 			<h3 class="disc"><a class="disclink" href="https://github.com/oguzki" target="_blank">огузки
 					corp.</a>, 2023
 			</h3>
@@ -55,27 +56,34 @@
 		</div>
 	</div>
 	<div class="menu2" id="kaz">
-		<h3 onclick="obama()"
+		<h3 onclick="kazich()"
 			style="background-color: green; margin: 30px; cursor: pointer; user-select: none; text-align: center; color: white">
 			сыграть</h3>
 		<div style="margin: 30px; text-align: center;">
 			<input id="stavki" type="number" size="20" style="text-align: center">
 		</div>
-		<h1 id="winlose" style="background-color: white; margin: 30px; text-align: center;"></h1>
+		<div style="text-align: center;">
+			<h1 id="winlose" style="background-color: white; margin: 30px;"></h1>
+			<img id="winlose_pic" src="" style="width: 150px; height: 150px;">
+		</div>
 	</div>
 	<div class="menu3" id="kaz1" onclick="closeMenu()"></div>
-	<header style="display: flex; justify-content: space-between; background-color: #113f67;">
+	<header style="display: flex; justify-content: space-between; background-color: #424242;">
 		<h3>деньги: <mark id="dengi"></mark></h3>
 		<h3 style="cursor: pointer; user-select: none;" onclick="nextDay()">некст день <mark id="dayD">0</mark>.<mark
 				id="monD">0</mark>.<mark id="yearD">0</mark></h3>
 	</header>
-	<header style="display: flex; justify-content: space-between; background-color: #113f67;">
+	<header style="display: flex; justify-content: space-between; background-color: #424242;">
 		<button class="menubutton" onclick="cazik()">казино</button>
 		<button class="menubutton" onclick="mama()" id="mother">звонок маме</button>
 	</header>
-	<header style="text-align: center; background-color: #113f67;">
-		<button class="menubutton" onclick="generate()">сохраниться</button>
+	<header style="text-align: center; background-color: #424242;">
+		<button class="menubutton" onclick="generate()" style="margin: 5px 0px;">сохраниться</button>
 	</header>
+	<div style="text-align: center; margin-top: 10px;">
+		<img src="https://rtvi.com/wp-content/uploads/2023/04/ap23103292963983-768x432.webp">
+		<h1 class="disc">родная самара)))</h1>
+	</div>
 </body>
 
 <script src="files/script/sim/localization.js"></script>
@@ -90,21 +98,31 @@
 	var year = 00;
 	var money = 00;
 
+	const mainmenu = document.getElementById('mainmenu');
+	const showcode = document.getElementById('showcode');
+	const kaz = document.getElementById('kaz');
+	const kaz1 = document.getElementById('kaz1')
+	const randomobj = document.getElementById('randomobj');
+	const winlose = document.getElementById('winlose');
+	const winlose_pic = document.getElementById('winlose_pic');
+
 	function closeMenu() {
-		document.getElementById('mainmenu').style.zIndex = "-1";
-		document.getElementById('mainmenu').style.opacity = "0";
-		document.getElementById('showcode').style.zIndex = "-1";
-		document.getElementById('showcode').style.opacity = "0";
-		document.getElementById('kaz').style.width = "0";
-		document.getElementById('kaz1').style.width = "0";
-		document.getElementById('randomobj').style.zIndex = "-1";
-		document.getElementById('randomobj').style.opacity = "0";
-		document.getElementById('winlose').innerHTML = "";
+		mainmenu.style.zIndex = "-1";
+		mainmenu.style.opacity = "0";
+		showcode.style.zIndex = "-1";
+		showcode.style.opacity = "0";
+		kaz.style.width = "0";
+		kaz1.style.width = "0";
+		randomobj.style.zIndex = "-1";
+		randomobj.style.opacity = "0";
+		winlose.innerHTML = "";
+		winlose_pic.src = "https://media.tenor.com/03h-1rm2SwYAAAAi/keyvon-crawford-kilo-tray-ballas.gif";
+		winlose_pic.height = "150px";
 	}
 
 	function cazik() {
-		document.getElementById('kaz').style.width = "300px";
-		document.getElementById('kaz1').style.width = "1920px";
+		kaz.style.width = "300px";
+		kaz1.style.width = "1920px";
 	}
 
 	function stp() {
@@ -123,20 +141,24 @@
 		document.getElementById('mother').disabled = false;
 	}
 
-	function obama() {
+	function kazich() {
 		var random = Math.floor(Math.random() * 5) + 1;
 		var stavka = Number(document.getElementById('stavki').value);
 		if (stavka > money) {
-			document.getElementById('winlose').innerHTML = "ставка больше баланса";
+			winlose.innerHTML = "ставка больше баланса";
 		} else {
 			if (random === 3 || random === 1) {
 				money = money + stavka;
 				moneychange();
-				document.getElementById('winlose').innerHTML = "ура победа";
+				winlose.innerHTML = "завоз";
+				winlose_pic.src = "https://media.tenor.com/8TxwhcnM6FQAAAAd/watermelon-truck.gif";
+				winlose_pic.style.height = "150px"
 			} else {
 				money = money - stavka;
 				moneychange();
-				document.getElementById('winlose').innerHTML = "о нет, слив";
+				winlose.innerHTML = "опять слив";
+				winlose_pic.src = "https://media.tenor.com/xXlpuO8-ON0AAAAd/melon-watermelon.gif";
+				winlose_pic.style.height = "189px"
 			}
 		}
 	}
