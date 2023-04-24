@@ -2,7 +2,7 @@ const rname = document.getElementById('rname');
 const rchoice1 = document.getElementById('rchoice1');
 const rchoice2 = document.getElementById('rchoice2');
 
-const hfa = [
+const robj = [
     {
         name: 'вы наткнулись на голосование, результатом которого должна решиться судьба жителей Зимбабве. что вы выберете?',
         choice1: 'я против жителей зимбабве',
@@ -13,8 +13,8 @@ const hfa = [
 let trackindex = 0;
 
 function openchoice() {
-    document.getElementById('randomobj').style.zIndex = "4";
-    document.getElementById('randomobj').style.opacity = "1";
+    randomobj.style.zIndex = "4";
+    randomobj.style.opacity = "1";
 }
 
 function randomsob() {
@@ -58,9 +58,9 @@ function randomsob() {
         };
         if (random === 3) {
             openchoice();
-            rname.textContent = hfa[trackindex = 0].name;
-            rchoice1.textContent = hfa[trackindex = 0].choice1;
-            rchoice2.textContent = hfa[trackindex = 0].choice2;
+            rname.textContent = robj[trackindex = 0].name;
+            rchoice1.textContent = robj[trackindex = 0].choice1;
+            rchoice2.textContent = robj[trackindex = 0].choice2;
         }
     } else {
         openchoice();
