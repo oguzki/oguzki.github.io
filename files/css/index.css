@@ -9,10 +9,32 @@ body {
     background-color: #212121;
 }
 
-.card {
-    background-color: #424242;
-    border-radius: 10px;
-    margin: 10px 20px;
+@media(min-width: 961px) {
+    .card {
+        background-color: #424242;
+        border-radius: 10px;
+        margin: 10px 20px;
+    }
+    .mainbody {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media(max-width:960px) {
+    
+	.card {
+		background-color: #424242;
+		border-radius: 10px;
+		margin: 10px 0px;
+        width: 100%;
+	}
+
+	.mainbody {
+		margin: 0px 10px;
+	}
 }
 
 .uncard {
@@ -44,11 +66,4 @@ body {
 
 .card .link:hover {
     color: white;
-}
-
-.mainbody {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
 }
