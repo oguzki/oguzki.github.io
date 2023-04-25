@@ -21,7 +21,8 @@
 		</div>
 	</div>
 	<div id="mainmenu" class="menu">
-		<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
+		<div
+			style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; background-color: #212121;">
 			<h2 style="color: white; font-family: ubuntu;">NikitaSim beta 1.2</h2>
 			<button class="bb" onclick="start()" autofocus id="lang1">начать</button>
 			<div style="margin: 10px; text-align: center;">
@@ -29,11 +30,6 @@
 				<input id="parol" size="30" style="text-align: center">
 				<button class="bb" onclick="resume()" id="lang3">продолжить</button>
 				<h3 style="color: red; font-family: ubuntu;" id="errormsg"></h3>
-			</div>
-			<div style="display: flex; justify-content: center; margin-bottom: 10px;">
-				<img class="flag" id="flag1" src="files/icons/ru.svg" onclick="rus()">
-				<img class="flag" id="flag2" src="files/icons/gb.svg" onclick="eng()">
-				<img class="flag" id="flag3" src="files/icons/jp.svg" onclick="jp()">
 			</div>
 			<h3 class="disc" id="lang4">данная игра является шуточной и не имеет ничего общего с реальностью (кроме
 				Никиты)</h3>
@@ -84,12 +80,11 @@
 		<button class="menubutton" onclick="generate()" style="margin: 5px 0px;">сохраниться</button>
 	</header>
 	<div style="text-align: center; margin-top: 10px;">
-		<img src="https://rtvi.com/wp-content/uploads/2023/04/ap23103292963983-768x432.webp" width: 90%">
+		<img src="https://rtvi.com/wp-content/uploads/2023/04/ap23103292963983-768x432.webp" style="width: 60%">
 		<h1 class="disc">родная самара)))</h1>
 	</div>
 </body>
 
-<script src="files/script/sim/localization.js"></script>
 <script src="files/script/sim/password.js"></script>
 <script src="files/script/sim/time.js"></script>
 <script src="files/script/sim/random.js"></script>
@@ -149,19 +144,27 @@
 		var stavka = Number(document.getElementById('stavki').value);
 		if (stavka > money) {
 			winlose.innerHTML = "ставка больше баланса";
+			winlose_pic.src = "https://media.tenor.com/-CfhczC_cREAAAAC/angai313-spongebob-sad.gif";
+			winlose_pic.style.height = "150px"
 		} else {
-			if (random === 3 || random === 1) {
-				money = money + stavka;
-				moneychange();
-				winlose.innerHTML = "завоз";
-				winlose_pic.src = "files/gif/win.gif";
-				winlose_pic.style.height = "150px"
+			if (stavka === 0) {
+				winlose.innerHTML = "брат, укажи ставку";
+				winlose_pic.src = "https://media.tenor.com/sADndc5QpsQAAAAC/no-score.gif";
+				winlose_pic.style.height = "115px"
 			} else {
-				money = money - stavka;
-				moneychange();
-				winlose.innerHTML = "опять слив";
-				winlose_pic.src = "files/gif/lose.gif";
-				winlose_pic.style.height = "189px"
+				if (random === 3 || random === 1) {
+					money = money + stavka;
+					moneychange();
+					winlose.innerHTML = "завоз";
+					winlose_pic.src = "files/gif/win.gif";
+					winlose_pic.style.height = "150px"
+				} else {
+					money = money - stavka;
+					moneychange();
+					winlose.innerHTML = "опять слив";
+					winlose_pic.src = "files/gif/lose.gif";
+					winlose_pic.style.height = "189px"
+				}
 			}
 		}
 	}
