@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #F9F7F7;
+    min-height: 100%;
+}
+
+.video {
+    display: flex;
+    width: 80%;
+}
+
+.video_backgorund {
+    filter: blur(10px);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    z-index: 0;
+    width: 80%;
+}
+
+.video_base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.video_backgorund video {
+    width: 80%;
+}
+
+.video_base video {
+    width: 50%;
+}
