@@ -1,0 +1,114 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	outline: 0;
+}
+
+body {
+	background-color: black;
+	font-family: ubuntu;
+}
+
+.elprimo {
+	color: white;
+	padding: 5px 15px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.panelka {
+	height: 1000px;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color: rgba(109, 108, 108, 0.753);
+	overflow-x: hidden;
+	padding-top: 30px;
+	transition: .5s;
+}
+
+.panelka2 {
+	height: 1000px;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0);
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: .5s;
+}
+
+.panelka a {
+	padding: 8px 8px 8px 25px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.panelka a:hover {
+	color: greenyellow;
+}
+
+.panelka .closebtn {
+	position: absolute;
+	top: 0;
+	font-size: 36px;
+}
+
+.openbtn {
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgb(36, 36, 36);
+	color: white;
+	padding: 10px 15px;
+	border: none;
+}
+
+.openbtn2 {
+	font-size: 20px;
+	padding: 10px 15px;
+	border: none;
+}
+
+.openbtn:hover {
+	background-color: #444;
+}
+
+.baza {
+	margin: 5px 10px;
+}
+
+a.button {
+	text-decoration: none;
+	padding: 0px 10px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+a.button:hover {
+	box-shadow: 0 0 5px 3px grey;
+}
+
+.link {
+	color: greenyellow;
+	transition: .5s;
+	text-decoration: none;
+}
+
+.link:hover {
+	color: gold;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url(../fonts/Ubuntu.ttf);
+}
