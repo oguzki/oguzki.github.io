@@ -25,19 +25,31 @@ function resume() {
         }
         document.getElementById('errormsg').innerHTML = ww;
     } else {
-        var a1 = Number(code.slice(0, 2));
-        var a2 = Number(code.slice(3, 5));
-        var a3 = Number(code.slice(6, 8));
-        var a4 = Number(code.slice(10));
-        year = a1;
-        day = a2;
-        mon = a3;
-        money = a4 / 2;
-        daychange();
-        monchange();
-        yearchange();
-        moneychange();
-        closeMenu();
+        if (code === "wow") {
+            year = 2023;
+            day = 12;
+            mon = 12;
+            money = 200000;
+            daychange();
+            monchange();
+            yearchange();
+            moneychange();
+            closeMenu();
+        } else {
+            var a1 = Number(code.slice(0, 2));
+            var a2 = Number(code.slice(3, 5));
+            var a3 = Number(code.slice(6, 8));
+            var a4 = Number(code.slice(10));
+            year = a1;
+            day = a2;
+            mon = a3;
+            money = a4 / 2;
+            daychange();
+            monchange();
+            yearchange();
+            moneychange();
+            closeMenu();
+        }
     }
 }
 
