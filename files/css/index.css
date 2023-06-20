@@ -57,13 +57,27 @@ body {
     margin-bottom: 3px;
 }
 
-.card .link {
+.link {
     font-family: ubuntu;
     text-decoration: none;
     color: gold;
     transition: .5s;
 }
 
-.card .link:hover {
+.spotify_link {
+    font-family: ubuntu;
+    text-decoration: none;
+    color: rgb(0, 180, 45);;
+    transition: .5s;
+}
+
+.rhub_link {
+    font-family: ubuntu;
+    text-decoration: none;
+    color: rgb(218, 0, 218);
+    transition: .5s;
+}
+
+.card a:hover {
     color: white;
 }
