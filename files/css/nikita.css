@@ -10,6 +10,11 @@ h3 {
     color: white;
 }
 
+h2 {
+    font-family: ubuntu;
+    color: white;
+}
+
 .flag {
     width: 50px;
     padding: 0px 10px;
@@ -81,7 +86,7 @@ h3 {
     opacity: 0;
     overflow-x: hidden;
     transition: .5s;
-    background-color: rgba(0, 0, 0, 0.205);
+    background-color: rgba(0, 0, 0, 0.68);
 }
 
 .menu1 {

@@ -47,3 +47,7 @@ function yearchange() {
 function moneychange() {
     document.getElementById('dengi').innerHTML = money;
 }
+
+function healthchange() {
+    document.getElementById('zdorovie').innerHTML = health;
+}

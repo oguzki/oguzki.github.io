@@ -13,11 +13,14 @@
 </style>
 
 <body style="background-color: #212121">
+	<audio id="audio" autoplay>
+		<source src="" id="music">
+	</audio>
 	<div id="showcode" class="menu1">
 		<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
 			<h3>ваш пароль:</h3>
 			<h2 id="showpass" style="color: white; font-family: ubuntu;"></h2>
-			<button onclick="closeMenu()" class="bb">ок</button>
+			<button onclick="closeMenu()" class="bb">OK</button>
 		</div>
 	</div>
 	<div id="mainmenu" class="menu">
@@ -41,13 +44,25 @@
 	<div id="randomobj" class="randomobj">
 		<div id="randomsod"
 			style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
-			<h2 style="color: white; font-family: ubuntu;" id="lang6">вау, это же случайное событие</h2>
+			<h3 id="lang6">вау, это же случайное событие</h3>
 			<div style="margin: 30px; text-align: center;">
-				<h3 id="rname">test</h3>
+				<h2 id="rname">test</h2>
 			</div>
 			<div style="display: flex; justify-content: center;">
-				<button id="rchoice1" class="choicebutton" onclick="closeMenu()">1</button>
-				<button id="rchoice2" class="choicebutton" onclick="closeMenu()">2</button>
+				<button id="rchoice1" class="choicebutton" onclick="choice1()">1</button>
+				<button id="rchoice2" class="choicebutton" onclick="choice2()">2</button>
+			</div>
+		</div>
+	</div>
+	<div id="posle" class="randomobj">
+		<div id="randomsod"
+			style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">\
+			<h3 id="spname">test</h3>
+			<div style="margin: 30px; text-align: center;">
+				<h2 id="pname">test</h2>
+			</div>
+			<div style="display: flex; justify-content: center;">
+				<button id="rchoice1" class="choicebutton" onclick="closeMenu()">ок</button>
 			</div>
 		</div>
 	</div>
@@ -66,6 +81,7 @@
 	<div class="menu3" id="kaz1" onclick="closeMenu()"></div>
 	<header style="display: flex; justify-content: space-between; background-color: #424242;">
 		<h3>деньги: <mark id="dengi"></mark></h3>
+		<h3>здоровье: <mark id="zdorovie"></mark></h3>
 		<h3>дата: <mark id="dayD">0</mark>.<mark id="monD">0</mark>.<mark id="yearD">0</mark></h3>
 	</header>
 	<header style="display: flex; justify-content: space-between; background-color: #424242;">
@@ -80,10 +96,12 @@
 		<button class="menubutton" onclick="generate()" style="margin: 5px 0px;">сохраниться</button>
 	</header>
 	<div style="text-align: center; margin-top: 10px;">
-		<img src="https://triiips.com/storage/app/media/excursion/16/9e/ea/8690_f28bf8709c5bf5e0_large.jpg" style="width: 60%">
+		<img src="https://triiips.com/storage/app/media/excursion/16/9e/ea/8690_f28bf8709c5bf5e0_large.jpg"
+			style="width: 60%">
 		<h1 class="disc">родная самара)))</h1>
 	</div>
-	<img src="https://rtvi.com/wp-content/uploads/2023/04/ap23103292963983-768x432.webp" style="opacity: 0; z-index: -1;">
+	<img src="https://rtvi.com/wp-content/uploads/2023/04/ap23103292963983-768x432.webp"
+		style="opacity: 0; z-index: -1;">
 </body>
 
 <script src="files/script/sim/password.js"></script>
@@ -96,12 +114,14 @@
 	var mon = 00;
 	var year = 00;
 	var money = 00;
+	var health = 00;
 
 	const mainmenu = document.getElementById('mainmenu');
 	const showcode = document.getElementById('showcode');
 	const kaz = document.getElementById('kaz');
 	const kaz1 = document.getElementById('kaz1')
 	const randomobj = document.getElementById('randomobj');
+	const posle = document.getElementById('posle');
 	const winlose = document.getElementById('winlose');
 	const winlose_pic = document.getElementById('winlose_pic');
 
@@ -114,9 +134,20 @@
 		kaz1.style.width = "0";
 		randomobj.style.zIndex = "-1";
 		randomobj.style.opacity = "0";
+		posle.style.zIndex = "-1";
+		posle.style.opacity = "0";
 		winlose.innerHTML = "";
 		winlose_pic.src = "files/gif/base.gif";
 		winlose_pic.height = "150px";
+		music.src = "";
+		audio.load();
+	}
+
+	function changepole() {
+		randomobj.style.zIndex = "-1";
+		randomobj.style.opacity = "0";
+		posle.style.zIndex = "4";
+		posle.style.opacity = "1";
 	}
 
 	function cazik() {
