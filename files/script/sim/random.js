@@ -49,6 +49,8 @@ function choice1() {
             changepole();
             spname.textContent = "Ваше благородие, Госпожа Удача...";
             pname.textContent = "Увы, но в этот раз у вас ничего не получилось. Все нелегальные предметы были конфискованы, а вы потеряли 5 единиц здоровья.";
+            health = health - 5;
+            healthchange();
         } else {
             changepole();
             spname.textContent = "Счастливчик. Хотя, кто знает, что для тебя лучше...";
@@ -86,6 +88,10 @@ function choice2() {
             changepole();
             spname.textContent = "Ваше благородие, Госпожа Удача...";
             pname.textContent = '"Зачем сидеть на парах" - подумали вы и отправились домой. Но по пути вы встретили куратора. Поздравляю, Вы снова в шараге. Вы потеряли 5 единиц здоровья и 30 рублей.';
+            health = health - 5;
+            money = money - 30;
+            healthchange();
+            moneychange();
         } else {
             changepole();
             spname.textContent = "В гостях хорошо, а дома лучше.";
