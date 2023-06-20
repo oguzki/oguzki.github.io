@@ -26,7 +26,7 @@
 	<div id="mainmenu" class="menu">
 		<div
 			style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; background-color: #212121;">
-			<h2 style="color: white; font-family: ubuntu;">NikitaSim beta 1.2</h2>
+			<h2 style="color: white; font-family: ubuntu;">NikitaSim 1.5 (beta)</h2>
 			<button class="bb" onclick="start()" autofocus id="lang1">начать</button>
 			<div style="margin: 10px; text-align: center;">
 				<h3 id="lang2">или введите пароль</h3>
@@ -97,11 +97,9 @@
 	</header>
 	<div style="text-align: center; margin-top: 10px;">
 		<img src="https://triiips.com/storage/app/media/excursion/16/9e/ea/8690_f28bf8709c5bf5e0_large.jpg"
-			style="width: 60%">
+			style="max-width: 70%">
 		<h1 class="disc">родная самара)))</h1>
 	</div>
-	<img src="https://rtvi.com/wp-content/uploads/2023/04/ap23103292963983-768x432.webp"
-		style="opacity: 0; z-index: -1;">
 </body>
 
 <script src="files/script/sim/password.js"></script>
@@ -110,11 +108,11 @@
 
 <script>
 
-	var day = 00;
-	var mon = 00;
-	var year = 00;
-	var money = 00;
-	var health = 00;
+	var day = 0;
+	var mon = 0;
+	var year = 0;
+	var money = 0;
+	var health = 0;
 
 	const mainmenu = document.getElementById('mainmenu');
 	const showcode = document.getElementById('showcode');
