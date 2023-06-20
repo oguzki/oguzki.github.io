@@ -53,8 +53,7 @@ body {
 
 .card .open {
     text-align: center;
-    margin: 0px 5px;
-    margin-bottom: 3px;
+    padding-bottom: 3px;
 }
 
 .link {
