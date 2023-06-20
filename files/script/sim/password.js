@@ -77,6 +77,30 @@ function generate() {
         if (mon > 10 && day > 10 && health < 10) {
             var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
         }
+
+        if (mon > 10 && health === 100) {
+            var aboba = health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
+        }
+
+        if (mon > 10 && health < 100 && health >= 10) {
+            var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
+        }
+
+        if (mon > 10 && health < 10) {
+            var aboba = "0" + "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
+        }
+
+        if (day > 10 && health === 100) {
+            var aboba = health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+        }
+
+        if (day > 10 && health < 100 && health >= 10) {
+            var aboba = "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+        }
+
+        if (day > 10 && health < 10) {
+            var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+        }
     }
     document.getElementById('showpass').innerHTML = aboba;
     console.log(aboba);
