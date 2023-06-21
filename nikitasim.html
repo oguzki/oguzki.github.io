@@ -153,7 +153,7 @@
 		posle.style.opacity = "0";
 		winlose.innerHTML = "";
 		winlose_pic.src = "files/gif/base.gif";
-		winlose_pic.height = "150px";
+		winlose_pic.style.height = "150px";
 		music.src = "";
 		audio.load();
 	}
@@ -193,6 +193,10 @@
 			winlose.innerHTML = "ставка больше баланса";
 			winlose_pic.src = "https://media.tenor.com/-CfhczC_cREAAAAC/angai313-spongebob-sad.gif";
 			winlose_pic.style.height = "150px"
+		} if (stavka < 0) {
+			winlose.innerHTML = "ставка меньше нуля";
+			winlose_pic.src = "https://media.tenor.com/-CfhczC_cREAAAAC/angai313-spongebob-sad.gif";
+			winlose_pic.style.height = "150px"
 		} else {
 			if (stavka === 0) {
 				winlose.innerHTML = "брат, укажи ставку";
@@ -203,14 +207,14 @@
 					money = money + stavka;
 					moneychange();
 					winlose.innerHTML = "завоз";
-					winlose_pic.src = "files/gif/win.gif";
-					winlose_pic.style.height = "150px"
+					winlose_pic.src = "https://media.tenor.com/T7FtbDppPcYAAAAC/reimu-touhou.gif";
+					winlose_pic.style.height = "159px"
 				} else {
 					money = money - stavka;
 					moneychange();
 					winlose.innerHTML = "опять слив";
-					winlose_pic.src = "files/gif/lose.gif";
-					winlose_pic.style.height = "189px"
+					winlose_pic.src = "https://media.tenor.com/x8hGgbuIAFgAAAAC/smash-watermelon.gif";
+					winlose_pic.style.height = "161px"
 				}
 			}
 		}
