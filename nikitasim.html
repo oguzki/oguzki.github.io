@@ -126,8 +126,7 @@
 			openchoice();
 			document.getElementById('randomsod').innerHTML = '<video src="files/video/badend.mp4" autoplay></video>';
 		} else {
-			posle.style.zIndex = "-1";
-			posle.style.opacity = "0";
+			closeMenu();
 		}
 	}
 
@@ -166,8 +165,6 @@
 	function closeMenu() {
 		mainmenu.style.zIndex = "-1";
 		mainmenu.style.opacity = "0";
-		showcode.style.zIndex = "-1";
-		showcode.style.opacity = "0";
 		kaz.style.width = "0";
 		kaz1.style.width = "0";
 		randomobj.style.zIndex = "-1";
