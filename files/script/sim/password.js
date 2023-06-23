@@ -14,12 +14,21 @@ function start() {
 
 function resume() {
     var code = document.getElementById('parol').value;
-    var code1 = Number(document.getElementById('parol').value);
-    if (code1 === 0) {
-        var ww = "Введи пароль";
-        document.getElementById('errormsg').innerHTML = ww;
+    if (code === "wow") {
+        health = 100;
+        year = 23;
+        day = 12;
+        mon = 12;
+        money = 200000;
+        healthchange();
+        daychange();
+        monchange();
+        yearchange();
+        moneychange();
+        kartinkaprikol();
+        closeMenu();
     } else {
-        if (code === "wow") {
+        if (code === "necoarc") {
             health = 100;
             year = 23;
             day = 12;
@@ -30,6 +39,7 @@ function resume() {
             monchange();
             yearchange();
             moneychange();
+            document.getElementById('menu_prikol').innerHTML = '<video src="files/video/necoarc-anekdot.mp4" controls autoplay style="max-width: 50%">'
             closeMenu();
         } else {
             var a0 = Number(code.slice(0, 3));
@@ -47,6 +57,7 @@ function resume() {
             monchange();
             yearchange();
             moneychange();
+            kartinkaprikol();
             closeMenu();
         }
     }
@@ -66,39 +77,39 @@ function generate() {
             var aboba = health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
         }
 
-        if (mon > 10 && day > 10 && health === 100) {
+        if (mon >= 10 && day >= 10 && health === 100) {
             var aboba = health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
         }
 
-        if (mon > 10 && day > 10 && health < 100 && health >= 10) {
+        if (mon >= 10 && day >= 10 && health < 100 && health >= 10) {
             var aboba = "0" + health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
         }
 
-        if (mon > 10 && day > 10 && health < 10) {
+        if (mon >= 10 && day >= 10 && health < 10) {
             var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
         }
 
-        if (mon > 10 && health === 100) {
+        if (mon >= 10 && health === 100) {
             var aboba = health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
         }
 
-        if (mon > 10 && health < 100 && health >= 10) {
+        if (mon >= 10 && health < 100 && health >= 10) {
             var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
         }
 
-        if (mon > 10 && health < 10) {
+        if (mon >= 10 && health < 10) {
             var aboba = "0" + "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
         }
 
-        if (day > 10 && health === 100) {
+        if (day >= 10 && health === 100) {
             var aboba = health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
         }
 
-        if (day > 10 && health < 100 && health >= 10) {
+        if (day >= 10 && health < 100 && health >= 10) {
             var aboba = "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
         }
 
-        if (day > 10 && health < 10) {
+        if (day >= 10 && health < 10) {
             var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
         }
     }
