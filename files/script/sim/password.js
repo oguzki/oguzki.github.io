@@ -64,56 +64,64 @@ function resume() {
 }
 
 function generate() {
-    document.getElementById('posle').style.zIndex = "3";
-    document.getElementById('posle').style.opacity = "1";
-    spname.textContent = "ваш пароль:";
-    if (mon < 10 && day < 10 && health < 100 && health >= 10) {
-        var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+    if (health < 1) {
+        posle.style.zIndex = "4";
+        posle.style.opacity = "1";
+        spname.textContent = "Но мы пойдём другим путём";
+        pname.textContent = "У Вас не получиться перехитрить систему...";
+        ballzb.textContent = "Принять судьбу";
     } else {
-        if (mon < 10 && day < 10 && health < 10) {
-            var aboba = "0" + "0" + health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
-        }
+        document.getElementById('posle').style.zIndex = "3";
+        document.getElementById('posle').style.opacity = "1";
+        spname.textContent = "ваш пароль:";
+        if (mon < 10 && day < 10 && health < 100 && health >= 10) {
+            var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+        } else {
+            if (mon < 10 && day < 10 && health < 10) {
+                var aboba = "0" + "0" + health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (mon < 10 && day < 10 && health === 100) {
-            var aboba = health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
-        }
+            if (mon < 10 && day < 10 && health === 100) {
+                var aboba = health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (mon >= 10 && day >= 10 && health === 100) {
-            var aboba = health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
-        }
+            if (mon >= 10 && day >= 10 && health === 100) {
+                var aboba = health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (mon >= 10 && day >= 10 && health < 100 && health >= 10) {
-            var aboba = "0" + health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
-        }
+            if (mon >= 10 && day >= 10 && health < 100 && health >= 10) {
+                var aboba = "0" + health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (mon >= 10 && day >= 10 && health < 10) {
-            var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
-        }
+            if (mon >= 10 && day >= 10 && health < 10) {
+                var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (mon >= 10 && health === 100) {
-            var aboba = health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
-        }
+            if (mon >= 10 && health === 100) {
+                var aboba = health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (mon >= 10 && health < 100 && health >= 10) {
-            var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
-        }
+            if (mon >= 10 && health < 100 && health >= 10) {
+                var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (mon >= 10 && health < 10) {
-            var aboba = "0" + "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
-        }
+            if (mon >= 10 && health < 10) {
+                var aboba = "0" + "0" + health + "-" + year + "Y" + "0" + day + "-" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (day >= 10 && health === 100) {
-            var aboba = health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
-        }
+            if (day >= 10 && health === 100) {
+                var aboba = health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (day >= 10 && health < 100 && health >= 10) {
-            var aboba = "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
-        }
+            if (day >= 10 && health < 100 && health >= 10) {
+                var aboba = "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+            }
 
-        if (day >= 10 && health < 10) {
-            var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+            if (day >= 10 && health < 10) {
+                var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
+            }
         }
+        pname.textContent = aboba;
+        console.log(aboba);
     }
-    pname.textContent = aboba;
-    console.log(aboba);
 }
