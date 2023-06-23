@@ -111,28 +111,38 @@ function openchoice() {
 }
 
 function randomsob() {
-    random = Math.floor(Math.random() * 7) + 1;
-    if (money < 200000) {
-        if (random === 1) {
-            openchoice();
-            rname.textContent = robj[trackindex = 0].name;
-            rchoice1.textContent = robj[trackindex = 0].choice1;
-            rchoice2.textContent = robj[trackindex = 0].choice2;
-        };
-        if (random === 2) {
-            openchoice();
-            rname.textContent = robj[trackindex = 1].name;
-            rchoice1.textContent = robj[trackindex = 1].choice1;
-            rchoice2.textContent = robj[trackindex = 1].choice2;
-        };
-        if (random === 3) {
-            openchoice();
-            rname.textContent = robj[trackindex = 2].name;
-            rchoice1.textContent = robj[trackindex = 2].choice1;
-            rchoice2.textContent = robj[trackindex = 2].choice2;
-        }
-    } else {
+    if (money >= 200000) {
         openchoice();
         document.getElementById('randomsod').innerHTML = '<video src="files/video/theend.mp4" autoplay></video>';
+    } else {
+        if (health < 1) {
+            posle.style.zIndex = "4";
+            posle.style.opacity = "1";
+            spname.textContent = "Инсульт жопы";
+            pname.textContent = "Вы не дожили до следующего дня...";
+            ballzb.textContent = "смэрть"
+        } else {
+            random = Math.floor(Math.random() * 7) + 1;
+            if (money < 200000) {
+                if (random === 1) {
+                    openchoice();
+                    rname.textContent = robj[trackindex = 0].name;
+                    rchoice1.textContent = robj[trackindex = 0].choice1;
+                    rchoice2.textContent = robj[trackindex = 0].choice2;
+                };
+                if (random === 2) {
+                    openchoice();
+                    rname.textContent = robj[trackindex = 1].name;
+                    rchoice1.textContent = robj[trackindex = 1].choice1;
+                    rchoice2.textContent = robj[trackindex = 1].choice2;
+                };
+                if (random === 3) {
+                    openchoice();
+                    rname.textContent = robj[trackindex = 2].name;
+                    rchoice1.textContent = robj[trackindex = 2].choice1;
+                    rchoice2.textContent = robj[trackindex = 2].choice2;
+                }
+            }
+        }
     }
 }
