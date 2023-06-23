@@ -31,9 +31,9 @@ function resume() {
         if (code === "necoarc") {
             health = 100;
             year = 23;
-            day = 12;
-            mon = 12;
-            money = 200000;
+            day = 1;
+            mon = 1;
+            money = 1000;
             healthchange();
             daychange();
             monchange();
