@@ -26,7 +26,7 @@ const robj = [
 
 let trackindex = 0;
 
-var rantest;
+var random;
 
 function udacha() {
     music.src = "files/audio/random.mp3";
@@ -34,7 +34,7 @@ function udacha() {
 }
 
 function choice1() {
-    if (rantest === 1) {
+    if (random === 1) {
         changepole();
         spname.textContent = "Озон терпел и нам велел";
         pname.textContent = "Вы решили затерпеть. Вы потеряли 10 единиц здоровья.";
@@ -42,7 +42,7 @@ function choice1() {
         healthchange();
     }
 
-    if (rantest === 2) {
+    if (random === 2) {
         var podrandom = Math.floor(Math.random() * 2);
         if (podrandom === 0) {
             udacha();
@@ -58,14 +58,14 @@ function choice1() {
         }
     }
 
-    if (rantest === 3) {
+    if (random === 3) {
         randomobj.style.zIndex = "-1";
         randomobj.style.opacity = "0";
     }
 }
 
 function choice2() {
-    if (rantest === 1) {
+    if (random === 1) {
         var podrandom = Math.floor(Math.random() * 2);
         if (podrandom === 0) {
             udacha();
@@ -81,7 +81,7 @@ function choice2() {
         }
     }
 
-    if (rantest === 2) {
+    if (random === 2) {
         var podrandom = Math.floor(Math.random() * 2);
         if (podrandom === 0) {
             udacha();
@@ -99,7 +99,7 @@ function choice2() {
         }
     }
 
-    if (rantest === 3) {
+    if (random === 3) {
         randomobj.style.zIndex = "-1";
         randomobj.style.opacity = "0";
     }
@@ -111,8 +111,7 @@ function openchoice() {
 }
 
 function randomsob() {
-    var random = Math.floor(Math.random() * 7) + 1;
-    rantest = random;
+    random = Math.floor(Math.random() * 7) + 1;
     if (money < 200000) {
         if (random === 1) {
             openchoice();
