@@ -64,8 +64,9 @@ function resume() {
 }
 
 function generate() {
-    document.getElementById('showcode').style.zIndex = "3";
-    document.getElementById('showcode').style.opacity = "1";
+    document.getElementById('posle').style.zIndex = "3";
+    document.getElementById('posle').style.opacity = "1";
+    spname.textContent = "ващ пароль:";
     if (mon < 10 && day < 10 && health < 100 && health >= 10) {
         var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
     } else {
@@ -113,6 +114,6 @@ function generate() {
             var aboba = "0" + "0" + health + "-" + year + "Y" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
         }
     }
-    document.getElementById('showpass').innerHTML = aboba;
+    pname.textContent = aboba;
     console.log(aboba);
 }
