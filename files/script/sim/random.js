@@ -22,6 +22,11 @@ const robj = [
         choice1: 'я против жителей зимбабве',
         choice2: 'я за жителей зимбабве',
     },
+    {
+        name: 'вы наткнулись на голосование, результатом которого должна решиться судьба жителей Зимбабве. что вы выберете?',
+        choice1: 'я против жителей зимбабве',
+        choice2: 'я за жителей зимбабве',
+    },
 ];
 
 let trackindex = 0;
@@ -29,7 +34,8 @@ let trackindex = 0;
 var random;
 
 function udacha() {
-    music.src = "https://drive.google.com/uc?export=download&id=1081E1NdGZleHfWRxUl63IRxKF5ZFPgjO";
+    spname.textContent = "Ваше благородие, Госпожа Удача...";
+    music.src = "files/audio/random.mp3";
     audio.load();
 }
 
@@ -47,7 +53,6 @@ function choice1() {
         if (podrandom === 0) {
             udacha();
             changepole();
-            spname.textContent = "Ваше благородие, Госпожа Удача...";
             pname.textContent = "Увы, но в этот раз у вас ничего не получилось. Все нелегальные предметы были конфискованы, а вы потеряли 5 единиц здоровья.";
             health = health - 5;
             healthchange();
@@ -59,8 +64,11 @@ function choice1() {
     }
 
     if (random === 3) {
-        randomobj.style.zIndex = "-1";
-        randomobj.style.opacity = "0";
+        changepole();
+        spname.textContent = "Интернет не анонимен";
+        pname.textContent = "Жители Зимбабве нашли вас (я сам хз как) и МЯГКО намекнули, что они тоже люди. Вы потеряли 10 единиц здоровья.";
+        health = health - 10;
+        healthchange();
     }
 }
 
@@ -70,7 +78,6 @@ function choice2() {
         if (podrandom === 0) {
             udacha();
             changepole();
-            spname.textContent = "Ваше благородие, Госпожа Удача...";
             pname.textContent = "Увы, но вы промахнулись. Пчела нанесла ответный удар. Вы потеряли 10 единиц здоровья";
             health = health - 10;
             healthchange();
@@ -86,7 +93,6 @@ function choice2() {
         if (podrandom === 0) {
             udacha();
             changepole();
-            spname.textContent = "Ваше благородие, Госпожа Удача...";
             pname.textContent = '"Зачем сидеть на парах" - подумали вы и отправились домой. Но по пути вы встретили куратора. Поздравляю, Вы снова в шараге. Вы потеряли 5 единиц здоровья и 30 рублей.';
             health = health - 5;
             money = money - 30;
@@ -100,8 +106,20 @@ function choice2() {
     }
 
     if (random === 3) {
-        randomobj.style.zIndex = "-1";
-        randomobj.style.opacity = "0";
+        var podrandom = Math.floor(Math.random() * 2);
+        if (podrandom === 0) {
+            changepole();
+            spname.textContent = "Интернет не анонимен";
+            pname.textContent = "Жители Зимбабве нашли вас (я сам хз как) и поблагодарили Вас за ваш выбор. Они вручили Вам 150 рублей.";
+            money = money + 150;
+            moneychange();
+        } else {
+            udacha();
+            changepole();
+            pname.textContent = "Хейтеры Зимбабве нашли вас и МЯГКО намекнули, что Вы сделали плохой выбор. Вы потерял 10 единиц здоровья.";
+            health = health - 10;
+            healthchange();
+        }
     }
 }
 
@@ -113,7 +131,7 @@ function openchoice() {
 function randomsob() {
     if (money >= 200000) {
         openchoice();
-        document.getElementById('randomsod').innerHTML = '<video autoplay style="max-width: 70%"><source src="https://drive.google.com/uc?export=download&id=1A0s31E1s3NgTy62hrpUpSVsX9_7sORJS" type="video/mp4"></video>';
+        document.getElementById('randomsod').innerHTML = '<video src="files/video/theend.mp4" autoplay style="max-width: 70%"></video>';
     } else {
         if (health < 1) {
             posle.style.zIndex = "4";
@@ -122,7 +140,7 @@ function randomsob() {
             pname.textContent = "Вы не дожили до следующего дня...";
             ballzb.textContent = "смэрть"
         } else {
-            random = Math.floor(Math.random() * 7) + 1;
+            random = Math.floor(Math.random() * 8) + 1;
             if (money < 200000) {
                 if (random === 1) {
                     openchoice();

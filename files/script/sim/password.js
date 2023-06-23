@@ -39,7 +39,7 @@ function resume() {
             monchange();
             yearchange();
             moneychange();
-            document.getElementById('menu_prikol').innerHTML = '<video controls autoplay style="max-width: 50%"><source src="https://drive.google.com/uc?export=download&id=1xjra5zXDALmfcFq37t-9vRkZTVeUFQlr" type="video/mp4"></video>'
+            document.getElementById('menu_prikol').innerHTML = '<video src="files/video/necoarc-anekdot.mp4" controls autoplay style="max-width: 50%"></video>'
             closeMenu();
         } else {
             var a0 = Number(code.slice(0, 3));
