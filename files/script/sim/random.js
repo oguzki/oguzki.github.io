@@ -29,7 +29,7 @@ let trackindex = 0;
 var random;
 
 function udacha() {
-    music.src = "files/audio/random.mp3";
+    music.src = "https://drive.google.com/uc?export=download&id=1081E1NdGZleHfWRxUl63IRxKF5ZFPgjO";
     audio.load();
 }
 
@@ -113,7 +113,7 @@ function openchoice() {
 function randomsob() {
     if (money >= 200000) {
         openchoice();
-        document.getElementById('randomsod').innerHTML = '<video src="files/video/theend.mp4" autoplay style="max-width: 70%"></video>';
+        document.getElementById('randomsod').innerHTML = '<video autoplay style="max-width: 70%"><source src="https://drive.google.com/uc?export=download&id=1A0s31E1s3NgTy62hrpUpSVsX9_7sORJS" type="video/mp4"></video>';
     } else {
         if (health < 1) {
             posle.style.zIndex = "4";
