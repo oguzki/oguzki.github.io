@@ -46,6 +46,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<div id="posle" class="randomobj">
 		<div id="randomsod"
 			style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">\
@@ -58,6 +59,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="menu2" id="kaz">
 		<h3 onclick="kazich()"
 			style="background-color: green; margin: 30px; cursor: pointer; user-select: none; text-align: center; color: white">
@@ -70,7 +72,8 @@
 			<img id="winlose_pic" src="" style="width: 150px; height: 150px;">
 		</div>
 	</div>
-	<div class="menu3" id="kaz1" onclick="closeMenu()"></div>
+	<div class="menu3" id="kaz1" onclick="closeKaz()"></div>
+
 	<header style="display: flex; justify-content: space-between; background-color: #424242;">
 		<h3>деньги: <mark id="dengi"></mark></h3>
 		<h3>здоровье: <mark id="zdorovie"></mark></h3>
@@ -169,11 +172,16 @@
 		}
 	}
 
+	function closeKaz() {
+		kaz.style.width = "0";
+		kaz1.style.width = "0";
+		music.src = "files/audio/delete.mp3";
+		audio.load();
+	}
+
 	function closeMenu() {
 		mainmenu.style.zIndex = "-1";
 		mainmenu.style.opacity = "0";
-		kaz.style.width = "0";
-		kaz1.style.width = "0";
 		randomobj.style.zIndex = "-1";
 		randomobj.style.opacity = "0";
 		posle.style.zIndex = "-1";
