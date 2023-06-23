@@ -66,7 +66,7 @@ function resume() {
 function generate() {
     document.getElementById('posle').style.zIndex = "3";
     document.getElementById('posle').style.opacity = "1";
-    spname.textContent = "ващ пароль:";
+    spname.textContent = "ваш пароль:";
     if (mon < 10 && day < 10 && health < 100 && health >= 10) {
         var aboba = "0" + health + "-" + year + "Y" + "0" + day + "-" + "0" + mon + "C" + "-" + (money * 2);
     } else {
