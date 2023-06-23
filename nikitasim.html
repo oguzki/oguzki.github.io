@@ -46,7 +46,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="posle" class="randomobj">
 		<div id="randomsod"
 			style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">\
@@ -121,7 +121,7 @@
 	const ballzb = document.getElementById('ballzb');
 
 	function ballz() {
-		if (health === 0) {
+		if (health < 1) {
 			posle.style.zIndex = "-1";
 			posle.style.opacity = "0";
 			randomobj.style.zIndex = "4";
