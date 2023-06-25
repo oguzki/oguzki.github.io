@@ -147,14 +147,14 @@ function kzcheck() {
                             winlose.textContent = "почти...";
                             winlose_pic.src = "https://media.discordapp.net/attachments/786030245688901674/1094306737756045312/ezgif-2-b9e8a376f7.gif";
                             winlose_pic.style.height = "150px";
-                            money = money + Math.round(stavka * 1.2);
+                            money = money + Math.round(stavka * 1.1);
                             moneychange();
                         } else {
                             if (r2 === r3) {
                                 winlose.textContent = "почти...";
                                 winlose_pic.src = "https://media.discordapp.net/attachments/786030245688901674/1094306737756045312/ezgif-2-b9e8a376f7.gif";
                                 winlose_pic.style.height = "150px";
-                                money = money + Math.round(stavka * 1.2);
+                                money = money + Math.round(stavka * 1.1);
                                 moneychange();
                             } else {
                                 money = money - stavka;
