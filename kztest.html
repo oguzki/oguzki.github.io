@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="192x192" href="files/pic/oguzki.png">
+    <title>kztest</title>
+    <meta name="description" content="k1n0">
+    <link rel="stylesheet" href="files/css/fonts.css">
+</head>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    .k {
+        background-color: white;
+        margin: 0px 5px;
+    }
+</style>
+
+<body>
+    <div style="display: flex; justify-content: center;">
+            <h2 class="k" id="1">⠀</h2>
+            <h2 class="k" id="2">⠀</h2>
+            <h2 class="k" id="3">⠀</h2>
+    </div>
+    <button onclick="kz()">старт</button>
+    <h2 class="k" id="mon">1000</h2>
+    <h2 class="k" id="jp"></h2>
+</body>
+
+<script>
+    var c1 = document.getElementById('1');
+    var c2 = document.getElementById('2');
+    var c3 = document.getElementById('3');
+    var jp = document.getElementById('jp');
+    var mon = document.getElementById('mon');
+
+    var money = 1000;
+
+    var r1;
+    var r2;
+    var r3;
+
+    function kz() {
+        jp.textContent = "";
+        r1 = Math.floor(Math.random() * 7) + 1;
+        r2 = Math.floor(Math.random() * 7) + 1;
+        r3 = Math.floor(Math.random() * 7) + 1;
+        c1.textContent = r1;
+        c2.textContent = r2;
+        c3.textContent = r3;
+        kzcheck();
+    }
+
+    function kzcheck() {
+        if (r1 === 7 && r2 === 7 && r3 === 7) {
+            jp.textContent = "ДЖЕКПОТ";
+            money = money * 5;
+            mon.textContent = money;
+        }
+    }
+</script>
+
+</html>

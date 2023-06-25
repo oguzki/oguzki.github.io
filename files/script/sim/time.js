@@ -44,21 +44,21 @@ function nextYear() {
 }
 
 function daychange() {
-    document.getElementById('dayD').innerHTML = day;
+    document.getElementById('dayD').textContent = day;
 }
 
 function monchange() {
-    document.getElementById('monD').innerHTML = mon;
+    document.getElementById('monD').textContent = mon;
 }
 
 function yearchange() {
-    document.getElementById('yearD').innerHTML = year;
+    document.getElementById('yearD').textContent = year;
 }
 
 function moneychange() {
-    document.getElementById('dengi').innerHTML = money;
+    document.getElementById('dengi').textContent = money;
 }
 
 function healthchange() {
-    document.getElementById('zdorovie').innerHTML = health;
+    document.getElementById('zdorovie').textContent = health;
 }
