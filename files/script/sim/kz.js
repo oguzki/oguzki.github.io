@@ -40,12 +40,6 @@ function kazich() {
 
 function kzpicks() {
     //кристал номер 1
-    if (r1 === 7) {
-        c1.innerHTML = '<img class="gems" src="files/pic/gems/7.png">';
-    }
-    if (r1 === 6) {
-        c1.innerHTML = '<img class="gems" src="files/pic/gems/6.png">';
-    }
     if (r1 === 5) {
         c1.innerHTML = '<img class="gems" src="files/pic/gems/5.png">';
     }
@@ -63,12 +57,6 @@ function kzpicks() {
     }
 
     //кристал номер 2
-    if (r2 === 7) {
-        c2.innerHTML = '<img class="gems" src="files/pic/gems/7.png">';
-    }
-    if (r2 === 6) {
-        c2.innerHTML = '<img class="gems" src="files/pic/gems/6.png">';
-    }
     if (r2 === 5) {
         c2.innerHTML = '<img class="gems" src="files/pic/gems/5.png">';
     }
@@ -86,12 +74,6 @@ function kzpicks() {
     }
 
     //кристал номер 3
-    if (r3 === 7) {
-        c3.innerHTML = '<img class="gems" src="files/pic/gems/7.png">';
-    }
-    if (r3 === 6) {
-        c3.innerHTML = '<img class="gems" src="files/pic/gems/6.png">';
-    }
     if (r3 === 5) {
         c3.innerHTML = '<img class="gems" src="files/pic/gems/5.png">';
     }
@@ -112,45 +94,31 @@ function kzpicks() {
 }
 
 function kzcheck() {
-    if (r1 === 7 && r2 === 7 && r3 === 7) {
+    if (r1 === 5 && r2 === 5 && r3 === 5) {
         winlose.textContent = "ДЖЕКПОТ";
         winlose_pic.src = "https://media.tenor.com/qNDgTlYUYwAAAAAC/jackpot-%D0%B4%D0%B6%D0%B5%D0%BA%D0%BF%D0%BE%D1%82.gif";
         winlose_pic.style.height = "112px"
         money = money + (stavka * 5);
         moneychange();
     }
-    if (r1 === 6 && r2 === 6 && r3 === 6) {
+    if (r1 === 4 && r2 === 4 && r3 === 4) {
         winlose.textContent = "Победа!";
         winlose_pic.src = "https://psv4.userapi.com/c536436/u382434012/docs/d18/b6d5b55d5809/shef_iz_kukhni_prikolny_muzhik_gif_bumery_pobeda.gif?extra=Bfq5sGpOgg4Ei7wU3ODRk8oSOCt46smS4Pm5XO8zWarrLZYy6HI146A1zohdTx0Qcnth72Oku5sWWDz3BK5nHI5JUa09t5lug-zicS0_vDsYHkMa3Mf_FNeenvd9srvuw2l67-EWIqL-9MLkM8PHj9fT";
         winlose_pic.style.height = "86px"
-        money = money + Math.round(stavka * 4.5);
-        moneychange();
-    }
-    if (r1 === 5 && r2 === 5 && r3 === 5) {
-        winlose.textContent = "Всем пиво за мой счёт!";
-        winlose_pic.src = "https://psv4.userapi.com/c235031/u470760053/docs/d9/415d440fea1b/ded_pyot_pivo.gif?extra=V00f-0PytKuGlQN-yQOCDc2NmKN4TAZBf8OenzbD70tzLY8jtcVnKcs3MgtEV5TxKWNvQsGSez8dD-tG8CAA_GfiXc3_Z0VErrKh5MjgYqQ7DugNwJkcpzCnODNxxXsMMw4YTQKcZ3kzXJyg3tpnvLQAMg";
-        winlose_pic.style.height = "274px"
         money = money + (stavka * 4);
         moneychange();
     }
-    if (r1 === 4 && r2 === 4 && r3 === 4) {
-        winlose.textContent = "ПЛЮС МОРАЛЬ";
-        winlose_pic.src = "https://media.tenor.com/dnTNlgOnLzsAAAAC/%D0%BF%D0%B0%D0%BF%D0%B8%D1%87-dance.gif";
-        winlose_pic.style.height = "84px"
-        money = money + Math.round(stavka * 3.5);
-        moneychange();
-    }
     if (r1 === 3 && r2 === 3 && r3 === 3) {
-        winlose.textContent = "на мотороллер хватит";
-        winlose_pic.src = "https://media.tenor.com/ROmWbzs_aSQAAAAC/maddy-murk-murk-power.gif";
-        winlose_pic.style.height = "84px";
-        money = money + (stavka * 3);
+        winlose.textContent = "Всем пиво за мой счёт!";
+        winlose_pic.src = "https://psv4.userapi.com/c235031/u470760053/docs/d9/415d440fea1b/ded_pyot_pivo.gif?extra=V00f-0PytKuGlQN-yQOCDc2NmKN4TAZBf8OenzbD70tzLY8jtcVnKcs3MgtEV5TxKWNvQsGSez8dD-tG8CAA_GfiXc3_Z0VErrKh5MjgYqQ7DugNwJkcpzCnODNxxXsMMw4YTQKcZ3kzXJyg3tpnvLQAMg";
+        winlose_pic.style.height = "274px"
+        money = money + (stavka * 5);
         moneychange();
     }
     if (r1 === 2 && r2 === 2 && r3 === 2) {
-        winlose.textContent = "ДЖЕКПО... а, ошибся";
-        winlose_pic.src = "https://psv4.userapi.com/c537232/u209567781/docs/d5/e77ddce18343/Sbal-s-pozorom.gif?extra=NzoUSNkMQqVCIcdJWrSmYy_saijq_558Cfr2dQpsJ-cC-tigTJC_aZh1QathYTAnlokR5cO0pDTjDWip0mSI70NZKsmwMYAYxSCHDC8PddCN87hVbpu_fOp1GaZQUitGyTFUxxyOSxTANkgr34bLxhlspg";
-        winlose_pic.style.height = "107px"
+        winlose.textContent = "на мотороллер хватит";
+        winlose_pic.src = "https://media.tenor.com/ROmWbzs_aSQAAAAC/maddy-murk-murk-power.gif";
+        winlose_pic.style.height = "84px";
         money = money + Math.round(stavka * 2.5);
         moneychange();
     }
