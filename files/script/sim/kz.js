@@ -29,9 +29,9 @@ function kazich() {
                 winlose_pic.src = "https://media.tenor.com/-CfhczC_cREAAAAC/angai313-spongebob-sad.gif";
                 winlose_pic.style.height = "150px"
             } else {
-                r1 = Math.floor(Math.random() * 5) + 1;
+                r1 = Math.floor(Math.random() * 6) + 1;
                 r2 = Math.floor(Math.random() * 5) + 1;
-                r3 = Math.floor(Math.random() * 5) + 1;
+                r3 = Math.floor(Math.random() * 6) + 1;
                 kzpicks();
             }
         }
@@ -40,55 +40,64 @@ function kazich() {
 
 function kzpicks() {
     //кристал номер 1
+    if (r1 === 6) {
+        c1.innerHTML = '<img class="gems" src="files/pic/gems/6.png">';
+    };
     if (r1 === 5) {
         c1.innerHTML = '<img class="gems" src="files/pic/gems/5.png">';
-    }
+    };
     if (r1 === 4) {
         c1.innerHTML = '<img class="gems" src="files/pic/gems/4.png">';
-    }
+    };
     if (r1 === 3) {
         c1.innerHTML = '<img class="gems" src="files/pic/gems/3.png">';
-    }
+    };
     if (r1 === 2) {
         c1.innerHTML = '<img class="gems" src="files/pic/gems/2.png">';
-    }
+    };
     if (r1 === 1) {
         c1.innerHTML = '<img class="gems" src="files/pic/gems/1.png">';
-    }
+    };
 
     //кристал номер 2
+    if (r2 === 6) {
+        c2.innerHTML = '<img class="gems" src="files/pic/gems/6.png">';
+    };
     if (r2 === 5) {
         c2.innerHTML = '<img class="gems" src="files/pic/gems/5.png">';
-    }
+    };
     if (r2 === 4) {
         c2.innerHTML = '<img class="gems" src="files/pic/gems/4.png">';
-    }
+    };
     if (r2 === 3) {
         c2.innerHTML = '<img class="gems" src="files/pic/gems/3.png">';
-    }
+    };
     if (r2 === 2) {
         c2.innerHTML = '<img class="gems" src="files/pic/gems/2.png">';
-    }
+    };
     if (r2 === 1) {
         c2.innerHTML = '<img class="gems" src="files/pic/gems/1.png">';
-    }
+    };
 
     //кристал номер 3
+    if (r3 === 6) {
+        c3.innerHTML = '<img class="gems" src="files/pic/gems/6.png">';
+    };
     if (r3 === 5) {
         c3.innerHTML = '<img class="gems" src="files/pic/gems/5.png">';
-    }
+    };
     if (r3 === 4) {
         c3.innerHTML = '<img class="gems" src="files/pic/gems/4.png">';
-    }
+    };
     if (r3 === 3) {
         c3.innerHTML = '<img class="gems" src="files/pic/gems/3.png">';
-    }
+    };
     if (r3 === 2) {
         c3.innerHTML = '<img class="gems" src="files/pic/gems/2.png">';
-    }
+    };
     if (r3 === 1) {
         c3.innerHTML = '<img class="gems" src="files/pic/gems/1.png">';
-    }
+    };
 
     kzcheck();
 }
@@ -129,33 +138,25 @@ function kzcheck() {
                         money = money + (stavka * 5);
                         moneychange();
                     } else {
-                        if (r1 === r2) {
+                        if (r1 === r2 || r1 === r3) {
                             winlose.textContent = "почти...";
                             winlose_pic.src = "https://media.discordapp.net/attachments/786030245688901674/1094306737756045312/ezgif-2-b9e8a376f7.gif";
                             winlose_pic.style.height = "150px";
-                            money = money + Math.round(stavka * 1.3);
+                            money = money + Math.round(stavka * 1.2);
                             moneychange();
                         } else {
-                            if (r1 === r3) {
+                            if (r2 === r3) {
                                 winlose.textContent = "почти...";
                                 winlose_pic.src = "https://media.discordapp.net/attachments/786030245688901674/1094306737756045312/ezgif-2-b9e8a376f7.gif";
                                 winlose_pic.style.height = "150px";
-                                money = money + Math.round(stavka * 1.3);
+                                money = money + Math.round(stavka * 1.2);
                                 moneychange();
                             } else {
-                                if (r2 === r3) {
-                                    winlose.textContent = "почти...";
-                                    winlose_pic.src = "https://media.discordapp.net/attachments/786030245688901674/1094306737756045312/ezgif-2-b9e8a376f7.gif";
-                                    winlose_pic.style.height = "150px";
-                                    money = money + Math.round(stavka * 1.3);
-                                    moneychange();
-                                } else {
-                                    money = money - stavka;
-                                    moneychange();
-                                    winlose.textContent = "...";
-                                    winlose_pic.src = "https://psv4.userapi.com/c237231/u704977679/docs/d52/3f9992bac2a9/clowndoomer.gif?extra=SPobilmhiUq1ovcXZjD7F_n88UrmJdlm8WQL-_t5d6JE5mAli5fq9_YNI4D3IOaEJDBeDkDopp8Pjal8dWWBPkgy4I14JSIuWpSKHQiu0UWnLOukyQl1YNKK4mhyHc4oR_jogn1UqAuL6qOpfTX_dXVPeg";
-                                    winlose_pic.style.height = "113px";
-                                }
+                                money = money - stavka;
+                                moneychange();
+                                winlose.textContent = "...";
+                                winlose_pic.src = "https://psv4.userapi.com/c237231/u704977679/docs/d52/3f9992bac2a9/clowndoomer.gif?extra=SPobilmhiUq1ovcXZjD7F_n88UrmJdlm8WQL-_t5d6JE5mAli5fq9_YNI4D3IOaEJDBeDkDopp8Pjal8dWWBPkgy4I14JSIuWpSKHQiu0UWnLOukyQl1YNKK4mhyHc4oR_jogn1UqAuL6qOpfTX_dXVPeg";
+                                winlose_pic.style.height = "113px";
                             }
                         }
                     }

@@ -129,7 +129,7 @@ function openchoice() {
 }
 
 function randomsob() {
-    if (money >= 200000) {
+    if (money >= 100000) {
         openchoice();
         document.getElementById('randomsod').innerHTML = '<video src="files/video/theend.mp4" autoplay style="max-width: 70%"></video>';
     } else {
@@ -141,7 +141,7 @@ function randomsob() {
             ballzb.textContent = "смэрть"
         } else {
             random = Math.floor(Math.random() * 8) + 1;
-            if (money < 200000) {
+            if (money < 100000) {
                 if (random === 1) {
                     openchoice();
                     rname.textContent = robj[trackindex = 0].name;

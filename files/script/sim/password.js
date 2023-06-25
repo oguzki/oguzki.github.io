@@ -19,7 +19,7 @@ function resume() {
         year = 23;
         day = 12;
         mon = 12;
-        money = 200000;
+        money = 100000;
         healthchange();
         daychange();
         monchange();
