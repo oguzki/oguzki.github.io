@@ -29,9 +29,9 @@ function kazich() {
                 winlose_pic.src = "https://media.tenor.com/-CfhczC_cREAAAAC/angai313-spongebob-sad.gif";
                 winlose_pic.style.height = "150px"
             } else {
-                r1 = Math.floor(Math.random() * 7) + 1;
-                r2 = Math.floor(Math.random() * 7) + 1;
-                r3 = Math.floor(Math.random() * 7) + 1;
+                r1 = Math.floor(Math.random() * 5) + 1;
+                r2 = Math.floor(Math.random() * 5) + 1;
+                r3 = Math.floor(Math.random() * 5) + 1;
                 kzpicks();
             }
         }
