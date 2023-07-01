@@ -110,7 +110,7 @@ function kzpicks() {
 function kzcheck() {
     if (r1 === 1 && r2 === 1 && r3 === 1) {
         winlose.textContent = "нормально";
-        winlose_pic.src = "https://psv4.userapi.com/c520036/u151886304/docs/d33/a490b0b9f316/jadeyanh-vylerria_1.gif?extra=4wcZloucgB6ScXFM3VVpIy6mV8PD4lSbwDjn6V_wAKdIDgcr7PvSjmcdvqWrII10zYvJPcRVNgEW6BbRbXNzgFahys0qhy2IOuDqMB9fMBFI3wExJYILtvlPeirh7hMWlTboD5l1t_pJVrdTV1P36mhwfA";
+        winlose_pic.src = "https://media.tenor.com/lXrTXpd6W8YAAAAC/jadeyanh-vylerria.gif";
         winlose_pic.style.height = "110px"
         money = money + (stavka * 2);
         moneychange();
@@ -131,7 +131,7 @@ function kzcheck() {
             } else {
                 if (r1 === 4 && r2 === 4 && r3 === 4) {
                     winlose.textContent = "Победа!";
-                    winlose_pic.src = "https://psv4.userapi.com/c536436/u382434012/docs/d18/b6d5b55d5809/shef_iz_kukhni_prikolny_muzhik_gif_bumery_pobeda.gif?extra=Bfq5sGpOgg4Ei7wU3ODRk8oSOCt46smS4Pm5XO8zWarrLZYy6HI146A1zohdTx0Qcnth72Oku5sWWDz3BK5nHI5JUa09t5lug-zicS0_vDsYHkMa3Mf_FNeenvd9srvuw2l67-EWIqL-9MLkM8PHj9fT";
+                    winlose_pic.src = "https://media.tenor.com/vBj5YoMJbo8AAAAC/%D0%BF%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0-%D0%BA%D1%83%D1%85%D0%BD%D1%8F.gif";
                     winlose_pic.style.height = "86px"
                     money = money + (stavka * 4);
                     moneychange();
