@@ -77,6 +77,16 @@ body {
     transition: .5s;
 }
 
+.tg_link {
+    color: gold;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.tg_link:hover {
+    color: plum;
+}
+
 .card a:hover {
     color: white;
 }
