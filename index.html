@@ -5,40 +5,174 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" sizes="192x192" href="files/pic/oguzki.png">
-	<title>огузки</title>
+	<title>oguzki corp.</title>
 	<meta name="description" content="Огузок, иди чистить бананы!">
-	<link rel="stylesheet" href="files/css/fonts.css">
-	<link rel="stylesheet" href="files/css/index.css">
+	<link rel="stylesheet" href="https://rizobyte.github.io/font-base/fonts.css">
 </head>
 
 <style>
+	* {
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+		outline: 0;
+	}
+
+	html,
+	body {
+		height: 100%;
+		background-color: #1A1A1D;
+		user-select: none;
+	}
+
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+	}
+
+	div.based {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+	}
+
+	video {
+		position: fixed;
+		min-width: 100%;
+		min-height: 100%;
+		opacity: 0;
+		transition: opacity 3.5s ease-in-out;
+	}
+
+	.player {
+		color: white;
+		font-family: ubuntu;
+		text-decoration: none;
+		margin: 5px 5px;
+		cursor: pointer;
+	}
+
+	#logo {
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+
+	#menu {
+		opacity: 0;
+		transition: opacity 2s ease-in-out;
+		z-index: 2;
+	}
+
+	a.menu {
+		color: white;
+		font-family: ubuntu;
+		text-decoration: none;
+		margin: 5px 5px;
+		cursor: pointer;
+		transition: .5s;
+	}
+
+	a.menu:hover {
+		color: turquoise;
+	}
 </style>
 
-<body>
-	<header style="background-color: #424242; padding: 7px 10px; display: flex; height: 75px;">
-		<img src="files/pic/oguzki.png" style="width: 75px; height: 75px;">
-	</header>
-	<div class="mainbody">
-		<div class="card">
-			<h2 class="name">NikitaSim 2.1.2 (beta)</h2>
-			<h2 class="open"><a class="link" target="_blank" href="https://oguzki.github.io/NikitaSim">Play</a></h2>
+<body onload="rand()">
+	<main>
+		<video autoplay muted src="" id="vid"></video>
+		<div style="height: 100%; width: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.459); z-index: 1;">
 		</div>
-		<div class="card">
-			<h2 class="name">k1n0 (beta)</h2>
-			<h2 class="open"><a class="link" target="_blank" href="https://oguzki.github.io/k1n0">Open</a></h2>
+	</main>
+
+	<div class="based" id="based">
+		<img src="files/pic/oguzki.png" style="width: 150px; height: 150px;" id="logo">
+		<div id="menu">
+			<a class="menu" href="https://oguzki.github.io/NikitaSim" target="_blank">NIKITASIM</a>
+			<a class="menu" href="https://oguzki.github.io/spotify" target="_blank">K1N0 BETA</a>
+			<a class="menu" href="https://oguzki.github.io/spotify" target="_blank">SPOTIFY</a>
+			<a class="menu" href="https://oguzki.github.io/aigirls" target="_blank">AIGIRLS</a>
+			<a class="menu" href="https://oguzki.github.io/rhub" target="_blank">RHUB</a>
 		</div>
-	</div>
-	<div>
-		<hr style="border: 1px white solid; width: 80%; margin: 0 auto;">
-		<div style="justify-content: center; color: white; width: 80%; margin: 0 auto; font-family: ubuntu;">
-			<h2 style="margin-left: 30px; margin-top: 5px;"><i>Остановка поддержки проектов RVid, Spotify, AiPics и
-					ShortЫ</i></h2>
-			<h3 style="margin: 0px 10px;">Из-за отсутствия обновлений Мы приняли решение отключить проекты RVid,
-				Spotify, AiPics и ShortЫ на неопределённый срок. Если вам нужен тот или иной контент с этих сайтов, то
-				пишите в <a href="t.me/qnezor" target="_blank" class="tg_link">телеграмм</a></h3>
-			<h3 style="margin: 0px 10px; text-align: right;">qnezor, 08.07.2023</h3>
+		<div
+			style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; height: 100%; position: fixed;">
+			<a class="player" href="https://www.nicovideo.jp/watch/sm41973237" target="_blank" id="olink">103点</a>
+			<a class="player" onclick="muted()" id="mtbutton">unmute</a>
 		</div>
 	</div>
 </body>
+
+<script>
+
+	var video = document.getElementById('vid');
+	var mtbutton = document.getElementById('mtbutton');
+	var olink = document.getElementById('olink');
+	var link = "https://drive.google.com/uc?export=download&id="
+	var pr1 = 0;
+	var random;
+
+
+
+	function rand() {
+		random = Math.floor(Math.random() * 3) + 1;
+		next();
+		document.getElementById('logo').style.opacity = '1';
+		document.getElementById('menu').style.opacity = '1';
+		video.style.opacity = '1';
+	}
+
+	function muted() {
+		switch (pr1) {
+			case 0:
+				video.muted = !video.muted;
+				mtbutton.textContent = "mute";
+				pr1 = 1;
+				break;
+			case 1:
+				video.muted = !video.muted;
+				mtbutton.textContent = "unmute";
+				pr1 = 0;
+				break;
+
+		}
+	}
+
+	function next() {
+		switch (random) {
+			case 1:
+				video.src = "files/video/103点 sm41973237_720.mp4";
+				olink.textContent = "103点";
+				olink.href = "https://www.nicovideo.jp/watch/sm41973237";
+				video.volume = 0.2;
+				break;
+			case 2:
+				video.src = "files/video/ユユキャスタービーボーイ sm40154287_1080.mp4";
+				olink.textContent = "ユユキャスタービーボーイ";
+				olink.href = "https://www.nicovideo.jp/watch/sm40154287";
+				video.volume = 0.3;
+				break;
+			case 3:
+				video.src = "files/video/Denwa Rumble sm40090301_1080.mp4";
+				olink.textContent = "Denwa Rumble";
+				olink.href = "https://www.nicovideo.jp/watch/sm40090301";
+				video.volume = 0.3;
+				break;
+		}
+
+		if (random >= 3) {
+			random = 1;
+		} else {
+			random = random + 1;
+		}
+		video.addEventListener('ended', next);
+	}
+</script>
 
 </html>
