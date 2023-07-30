@@ -14,18 +14,6 @@
 </style>
 
 <body id="body" scroll="no" style="overflow: hidden;">
-    <div class="tg" id="tg_rek">
-        <div
-            style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; text-align: center;">
-            <img src="files/extra/tg.png" width="269px" height="270px">
-            <h3 style="font-family: ubuntu; color: white;">у нас появился <a href="https://t.me/ult11team"
-                    target="_blank" class="qn">канал в телеге</a>.
-            </h3>
-            <h3 style="font-family: ubuntu; color: white;">мы там постим контент по нейронкам, моды для игр, приколы и
-                многое другое. (всё то, чем мы занимаемся)</h3>
-            <h2 onclick="closeTG()" class="okbutton">ок</h2>
-        </div>
-    </div>
     <div class="warning" id="prikol">
         <div
             style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; text-align: center;">
@@ -137,20 +125,6 @@
 </body>
 
 <script>
-    var rand = Math.floor(Math.random() * 5) + 1;
-    console.log(rand);
-    if (rand === 4) {
-        document.getElementById("tg_rek").style.opacity = "1";
-        document.getElementById("tg_rek").style.zIndex = "2";
-    }
-    if (rand === 2) {
-        document.getElementById("tg_rek").style.opacity = "1";
-        document.getElementById("tg_rek").style.zIndex = "2";
-    }
-    function closeTG() {
-        document.getElementById("tg_rek").style.opacity = "0";
-        document.getElementById("tg_rek").style.zIndex = "-1";
-    }
     function closeMenu() {
         document.getElementById("prikol").style.opacity = "0";
         document.getElementById("prikol").style.zIndex = "-1";
