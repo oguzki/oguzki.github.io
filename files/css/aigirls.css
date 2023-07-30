@@ -123,13 +123,3 @@ body {
 .okbutton:hover {
     color: greenyellow;
 }
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(../fonts/Ubuntu.ttf);
-}
-
-@font-face {
-    font-family: 'PoiretOne';
-    src: url(../fonts/PoiretOne.ttf);
-}
