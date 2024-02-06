@@ -40,24 +40,8 @@
 		align-items: center;
 		flex-direction: column;
 		height: 100%;
-		width: 100%;
+		width: 100%; 
 		position: fixed;
-	}
-
-	video {
-		position: fixed;
-		min-width: 100%;
-		min-height: 100%;
-		opacity: 0;
-		transition: opacity 1s ease-in-out;
-	}
-
-	.player {
-		color: white;
-		font-family: Ubuntu-Regular;
-		margin: 5px 5px;
-		cursor: pointer;
-		transition: .5s;
 	}
 
 	a.player:hover {
@@ -65,14 +49,11 @@
 	}
 
 	#logo {
-		opacity: 0;
 		transition: opacity 1s ease-in-out;
 	}
 
 	#menu {
-		opacity: 0;
 		transition: opacity 2s ease-in-out;
-		z-index: 2;
 		text-align: center;
 	}
 
@@ -92,116 +73,17 @@
 	}
 </style>
 
-<body onload="rand()">
-	<main>
-		<video autoplay muted src="" id="vid"></video>
-		<div style="height: 100%; width: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.459); z-index: 1;">
-		</div>
-	</main>
-
+<body>
 	<div class="based" id="based">
 		<img src="img/oguzki2.png" style="width: 150px; height: 150px;" id="logo">
 		<div id="menu">
 			<a class="menu" href="https://oguzki.github.io/NikitaSim" target="_blank">NIKITASIM</a>
 			<a class="menu" href="https://oguzki.github.io/projects" target="_blank">OTHER PROJECTS</a>
 		</div>
-		<div
-			style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; height: 100%; position: fixed;">
-			<a class="player" href="https://www.nicovideo.jp/watch/sm41973237" target="_blank" id="olink">103点</a>
-			<img class="player" style="width: 40px; height: 40px;" onclick="muted()" id="mtbutton"
-				src="img/icons/volume_off_white_48dp.svg">
-		</div>
 	</div>
 </body>
 
 <script>
-
-	var video = document.getElementById('vid');
-	var mtbutton = document.getElementById('mtbutton');
-	var olink = document.getElementById('olink');
-	var link = "https://drive.google.com/uc?export=download&id=";
-	var pr1 = 0;
-	var random;
-
-
-
-	function rand() {
-		random = Math.floor(Math.random() * 7) + 1;
-		next();
-		document.getElementById('logo').style.opacity = '1';
-		document.getElementById('menu').style.opacity = '1';
-		video.style.opacity = '1';
-	}
-
-	function muted() {
-		switch (pr1) {
-			case 0:
-				video.muted = !video.muted;
-				mtbutton.src = "img/icons/volume_up_white_48dp.svg";
-				pr1 = 1;
-				break;
-			case 1:
-				video.muted = !video.muted;
-				mtbutton.src = "img/icons/volume_off_white_48dp.svg";
-				pr1 = 0;
-				break;
-
-		}
-	}
-
-	function next() {
-		switch (random) {
-			case 1:
-				video.src = link + "1PQrtViaKqhu-Gh1DnjH8S7PfH9DvMvkf";
-				olink.textContent = "103点";
-				olink.href = "https://www.nicovideo.jp/watch/sm41973237";
-				video.volume = 0.2;
-				break;
-			case 2:
-				video.src = link + "1LjfrmkY4aeg8-SruJ2vTfpfNEhF4lTOy";
-				olink.textContent = "ユユキャスタービーボーイ";
-				olink.href = "https://www.nicovideo.jp/watch/sm40154287";
-				video.volume = 0.3;
-				break;
-			case 3:
-				video.src = link + "1t5Y25U1lzBu6Pgn5wwrNmSmor8EK2pBo";
-				olink.textContent = "Denwa Rumble";
-				olink.href = "https://www.nicovideo.jp/watch/sm40090301";
-				video.volume = 0.3;
-				break;
-			case 4:
-				video.src = link + "1HyrZXj6efacZMfstgmdFxC9NzldZEQ7w";
-				olink.textContent = "Imaginary Melody";
-				olink.href = "https://www.nicovideo.jp/watch/sm41158506";
-				video.volume = 0.3;
-				break;
-			case 5:
-				video.src = link + "1mjN6eSZp8Ln1OcjAsxv63WQCjlLV0sFI";
-				olink.textContent = "寝てる";
-				olink.href = "https://www.nicovideo.jp/watch/sm41563671";
-				video.volume = 0.3;
-				break;
-			case 6:
-				video.src = link + "1sox0qL3DoHlT-iLiDWM6Juzo1j63jIQo";
-				olink.textContent = "後藤太夫のテーマ";
-				olink.href = "https://www.nicovideo.jp/watch/sm41403891";
-				video.volume = 0.3;
-				break;
-			case 7:
-				video.src = link + "1J4GqYdC2k2FBtGtlinQupAiEWhFzchv6";
-				olink.textContent = "眠い...";
-				olink.href = "https://www.nicovideo.jp/watch/sm41017720";
-				video.volume = 0.3;
-				break;
-		}
-
-		if (random >= 7) {
-			random = 1;
-		} else {
-			random = random + 1;
-		}
-		video.addEventListener('ended', next);
-	}
 </script>
 
 </html>
