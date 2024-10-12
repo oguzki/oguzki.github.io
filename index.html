@@ -95,7 +95,7 @@
 <body onload="rand()">
 	<main>
 		<video autoplay muted src="" id="vid"></video>
-		<div style="height: 100%; width: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.459); z-index: 1;">
+		<div style="height: 100%; width: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.68); z-index: 1;">
 		</div>
 	</main>
 
@@ -103,7 +103,7 @@
 		<img src="img/oguzki2.png" style="width: 150px; height: 150px;" id="logo">
 		<div id="menu">
 			<a class="menu" href="https://oguzki.github.io/NikitaSim" target="_blank">NIKITASIM</a>
-			<a class="menu" href="https://github.com/oguzki/hfa" target="_blank">NIKITASIM</a>
+			<a class="menu" href="https://github.com/oguzki/hfa" target="_blank">HFA</a>
 			<a class="menu" href="https://oguzki.github.io/projects" target="_blank">OTHER PROJECTS</a>
 		</div>
 		<div
@@ -126,15 +126,12 @@
 
 	function rand() {
 		random = 1;
-	}
-
-	//function rand() {
 	//	random = Math.floor(Math.random() * 7) + 1;
-	//	next();
-	//	document.getElementById('logo').style.opacity = '1';
-	//	document.getElementById('menu').style.opacity = '1';
-	//	video.style.opacity = '1';
-	//}
+		next();
+		document.getElementById('logo').style.opacity = '1';
+		document.getElementById('menu').style.opacity = '1';
+		video.style.opacity = '1';
+	}
 
 	function muted() {
 		switch (pr1) {
