@@ -95,7 +95,7 @@
 <body onload="rand()">
 	<main>
 		<video autoplay muted src="" id="vid"></video>
-		<div style="height: 100%; width: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.68); z-index: 1;">
+		<div style="height: 100%; width: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.8); z-index: 1;">
 		</div>
 	</main>
 
@@ -198,7 +198,7 @@
 		if (random >= 7) {
 			random = 1;
 		} else {
-			random = random + 1;
+			random = 1;
 		}
 		video.addEventListener('ended', next);
 	}
