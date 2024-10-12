@@ -7,7 +7,7 @@
 	<link rel="icon" sizes="192x192" href="img/oguzki2.png">
 	<title>oguzki corp.</title>
 	<meta name="description" content="Огузок, иди чистить бананы!">
-	<link rel="stylesheet" href="https://rizobyte.github.io/font-base/fonts.css">
+	<link rel="stylesheet" href="https://oguzki.github.io/font-base/fonts.css">
 </head>
 
 <style>
@@ -119,19 +119,21 @@
 	var video = document.getElementById('vid');
 	var mtbutton = document.getElementById('mtbutton');
 	var olink = document.getElementById('olink');
-	var link = "https://drive.google.com/uc?export=download&id=";
+	var link = "https://oguzki.veliona.no/";
 	var pr1 = 0;
 	var random;
 
-
-
 	function rand() {
-		random = Math.floor(Math.random() * 7) + 1;
-		next();
-		document.getElementById('logo').style.opacity = '1';
-		document.getElementById('menu').style.opacity = '1';
-		video.style.opacity = '1';
+		random = 1;
 	}
+
+	//function rand() {
+	//	random = Math.floor(Math.random() * 7) + 1;
+	//	next();
+	//	document.getElementById('logo').style.opacity = '1';
+	//	document.getElementById('menu').style.opacity = '1';
+	//	video.style.opacity = '1';
+	//}
 
 	function muted() {
 		switch (pr1) {
@@ -152,7 +154,7 @@
 	function next() {
 		switch (random) {
 			case 1:
-				video.src = link + "1PQrtViaKqhu-Gh1DnjH8S7PfH9DvMvkf";
+				video.src = link + "103点 sm41973237_720.mp4";
 				olink.textContent = "103点";
 				olink.href = "https://www.nicovideo.jp/watch/sm41973237";
 				video.volume = 0.2;
