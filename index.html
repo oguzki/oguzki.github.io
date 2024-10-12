@@ -195,11 +195,22 @@
 				break;
 		}
 
+
 		if (random >= 7) {
 			random = 1;
 		} else {
 			random = 1;
+		//	random = random + 1;
 		}
+
+		if (random = 1) {
+			video.style.minHeight = "0";
+			video.style.minWidth = "0";
+		} else {
+			video.style.minHeight = "100%";
+			video.style.minWidth = "100%";
+		}
+
 		video.addEventListener('ended', next);
 	}
 </script>
