@@ -206,9 +206,11 @@
 		if (random = 1) {
 			video.style.minHeight = "0";
 			video.style.minWidth = "0";
+			video.style.borderRadius = "75px";
 		} else {
 			video.style.minHeight = "100%";
 			video.style.minWidth = "100%";
+			video.style.borderRadius = "0px";
 		}
 
 		video.addEventListener('ended', next);
