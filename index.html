@@ -126,7 +126,7 @@
 
 	function rand() {
 		// random = 1;
-	    random = Math.floor(Math.random() * 4) + 1;
+	    random = Math.floor(Math.random() * 7) + 1;
 		next();
 		document.getElementById('logo').style.opacity = '1';
 		document.getElementById('menu').style.opacity = '1';
@@ -176,19 +176,19 @@
 				video.volume = 0.3;
 				break;
 			case 5:
-				video.src = link + "1mjN6eSZp8Ln1OcjAsxv63WQCjlLV0sFI";
+				video.src = link + "寝てる_sm41563671_1080.mp4";
 				olink.textContent = "寝てる";
 				olink.href = "https://www.nicovideo.jp/watch/sm41563671";
 				video.volume = 0.3;
 				break;
 			case 6:
-				video.src = link + "1sox0qL3DoHlT-iLiDWM6Juzo1j63jIQo";
+				video.src = link + "後藤太夫のテーマ_sm41403891_1080.mp4";
 				olink.textContent = "後藤太夫のテーマ";
 				olink.href = "https://www.nicovideo.jp/watch/sm41403891";
 				video.volume = 0.3;
 				break;
 			case 7:
-				video.src = link + "1J4GqYdC2k2FBtGtlinQupAiEWhFzchv6";
+				video.src = link + "眠い..._sm41017720_720.mp4";
 				olink.textContent = "眠い...";
 				olink.href = "https://www.nicovideo.jp/watch/sm41017720";
 				video.volume = 0.3;
@@ -196,14 +196,14 @@
 		}
 
 
-		if (random >= 4) {
+		if (random >= 7) {
 			random = 1;
 		} else {
 			// random = 1;
 		    random = random + 1;
 		}
 
-		if (random = 1) {
+		/** if (random = 1) {
 			video.style.minHeight = "0";
 			video.style.minWidth = "0";
 			video.style.borderRadius = "75px";
@@ -211,7 +211,7 @@
 			video.style.minHeight = "100%";
 			video.style.minWidth = "100%";
 			video.style.borderRadius = "0px";
-		}
+		} **/
 
 		video.addEventListener('ended', next);
 	}
